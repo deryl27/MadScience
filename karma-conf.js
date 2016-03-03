@@ -40,7 +40,7 @@ module.exports = function(config) {
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters = ['dots', 'junit'];
     junitReporter = {
-        outputFile: 'test-results.xml'
+        outputFile: 'spec/reports/test-results.xml'
     };
 
     // web server port
