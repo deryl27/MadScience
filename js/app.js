@@ -5,13 +5,13 @@ var dummypassword = 'a_123456';
 
 madscienceapp.controller('MadScienceController', ['$scope', function($scope)
 {
+
   // console.log('GOD IS GREAT HHHHHHHH');
   //console.log('GOD IS GREAT');
   $scope.showModal = false;
   $scope.errormsg = false;
   $scope.currentUser = null;
   $scope.toggleModal = function() {
-
         $scope.showModal = !$scope.showModal;
     };
 
@@ -20,7 +20,6 @@ madscienceapp.controller('MadScienceController', ['$scope', function($scope)
       var currentEmail = person.email;
       var currentPassword = person.password;
       
-
       if(dummyemail == currentEmail && dummypassword == currentPassword) {
         console.log('Success Message');
         $scope.errormsg = false;
@@ -31,7 +30,6 @@ madscienceapp.controller('MadScienceController', ['$scope', function($scope)
         console.log('Error Message');
         $scope.errormsg = true;
       }
-        
     };
 
 }]);
