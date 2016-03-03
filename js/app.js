@@ -6,7 +6,7 @@ var dummypassword = 'a_123456';
 madscienceapp.controller('MadScienceController', ['$scope', function($scope)
 {
 
-  // console.log('GOD IS GREAT HHHHHHHH');
+   console.log('GOD IS GREAT HHHHHHHH');
   //console.log('GOD IS GREAT');
   $scope.showModal = false;
   $scope.errormsg = false;
