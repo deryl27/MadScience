@@ -5,7 +5,7 @@ var dummypassword = 'a_123456';
 
 madscienceapp.controller('MadScienceController', ['$scope', function($scope)
 {
-	console.log('DERYL TESTING');
+	console.log('DERYL TESTING 2');
 	$scope.showModal = false;
 	$scope.errormsg = false;
 	$scope.toggleModal = function() {
