@@ -1,5 +1,8 @@
+.DS_Store
+views/.*
 node_modules
 dist
 bower_components
 coverageOutputDir
 output
+.*
