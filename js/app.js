@@ -5,30 +5,33 @@ var dummypassword = 'a_123456';
 
 madscienceapp.controller('MadScienceController', ['$scope', function($scope)
 {
-	// console.log('GOD IS GREAT HHHHHHHH');
-	//console.log('GOD IS GREAT');
-	$scope.showModal = false;
-	$scope.errormsg = false;
-	$scope.toggleModal = function() {
+  // console.log('GOD IS GREAT HHHHHHHH');
+  //console.log('GOD IS GREAT');
+  $scope.showModal = false;
+  $scope.errormsg = false;
+  $scope.currentUser = null;
+  $scope.toggleModal = function() {
 
         $scope.showModal = !$scope.showModal;
     };
 
     $scope.submitLogin = function(person) {
-    	console.log("Person" , person);
-    	var currentEmail = person.email;
-    	var currentPassword = person.password;
-    	
+      console.log("Person" , person);
+      var currentEmail = person.email;
+      var currentPassword = person.password;
+      
 
-    	if(dummyemail == currentEmail && dummypassword == currentPassword) {
-    		console.log('Success Message');
-    		$scope.errormsg = false;
-    	}
-    	else {
-    		console.log('Error Message');
-    		$scope.errormsg = true;
-    	}
-    		
+      if(dummyemail == currentEmail && dummypassword == currentPassword) {
+        console.log('Success Message');
+        $scope.errormsg = false;
+        $scope.showModal = false;
+        $scope.currentUser = currentEmail;
+      }
+      else {
+        console.log('Error Message');
+        $scope.errormsg = true;
+      }
+        
     };
 
 }]);
@@ -36,7 +39,7 @@ madscienceapp.controller('MadScienceController', ['$scope', function($scope)
 madscienceapp.config(function($routeProvider) {
 
     $routeProvider
-		// home page
+    // home page
         .when('/', {
             templateUrl: 'views/page-home.html',
             controller: 'mainController'
