@@ -96,5 +96,5 @@ gulp.task('build', function() {
 });
 
 gulp.task('prod', function() {
-   runSequence('build-code', ['lint', 'vendor' ,'scripts', 'watch']);
+   runSequence('build-code', ['lint', 'vendor' ,'scripts']);
 });
