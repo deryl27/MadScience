@@ -5,11 +5,7 @@ var dummypassword = 'a_123456';
 
 madscienceapp.controller('MadScienceController', ['$scope', function($scope)
 {
-<<<<<<< Updated upstream
-	console.log('TESTING');
-=======
-	console.log('DERYL TESTING');
->>>>>>> Stashed changes
+
 	$scope.showModal = false;
 	$scope.errormsg = false;
 	$scope.toggleModal = function() {
