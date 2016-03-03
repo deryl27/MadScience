@@ -94,3 +94,7 @@ gulp.task('build-code', ['clean']);
 gulp.task('build', function() {
    runSequence('build-code', ['lint', 'vendor' ,'scripts', 'watch'], 'server');
 });
+
+gulp.task('prod', function() {
+   runSequence('build-code', ['lint', 'vendor' ,'scripts', 'watch']);
+});
