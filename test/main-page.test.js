@@ -33,7 +33,7 @@ describe('Main Test', function() {
 	});
 
 	it('valid password and valid username', function () {
-		expect(Person).not.toEqual({
+		expect(Person).toEqual({
 			email : 'mad@gmail.com',
 			password : 'a_123456'
 		});
