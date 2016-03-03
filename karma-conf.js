@@ -23,6 +23,10 @@ module.exports = function(config) {
       'test/*.js'
     ],
 
+    plugins: [
+      'karma-junit-reporter'  ,'karma-jasmine', 'karma-chrome-launcher', 'karma-coverage'
+    ],
+
 
     // list of files to exclude
     exclude: [
@@ -32,16 +36,24 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        'js/*.js' : ['coverage']
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters = ['dots', 'junit'];
-    junitReporter = {
-        outputFile: 'spec/reports/test-results.xml'
-    };
+    reporters: ['junit', 'coverage', 'progress'],
+
+    junitReporter:  {
+        outputDir: 'output',
+        outputFile: 'test-results.xml'
+    },
+
+    coverageReporter: {
+        type: 'html',
+        dir:  'coverageOutputDir'
+    },
 
     // web server port
     port: 9876,
@@ -62,7 +74,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
@@ -71,6 +83,7 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+
   })
 }
