@@ -5,38 +5,50 @@ describe('Main Test', function() {
 	var HousingAppController,
 	scope;
 
+
+
 	beforeEach(inject (function ($rootScope, $controller) {
 		scope = $rootScope.$new();
-
-		Person = {
-			email : 'mad@gmail.com',
-			password : 'a_123456'
-		};
-
 		HousingAppController = $controller('MadScienceController', {
 		'$scope': scope
 		});
 	}));
 
 	it('valid password and invalid username', function () {
-		expect(Person).not.toEqual({
+		InvalidPerson = {
 			email : 'ad@gmail.com',
 			password : 'a_123456'
-		});
+		}
+		scope.errormsg = false;
+		scope.submitLogin(InvalidPerson);
+		expect(scope.errormsg).toEqual(true);
 	});
 
 	it('invalid password and valid username', function () {
-		expect(Person).not.toEqual({
+		InvalidPerson = {
 			email : 'mad@gmail.com',
-			password : '123456'
-		});
+			password : 'a_132456'
+		}
+		scope.errormsg = false;
+		scope.submitLogin(InvalidPerson);
+		expect(scope.errormsg).toEqual(true);
 	});
 
 	it('valid password and valid username', function () {
-		expect(Person).toEqual({
+		Person = {
 			email : 'mad@gmail.com',
 			password : 'a_123456'
-		});
+		}
+		scope.errormsg = false;
+		scope.submitLogin(Person);
+		expect(scope.errormsg).toEqual(false);
+	});
+
+	it('toggle of modal', function () {
+		scope.showModal = false;
+		scope.toggleModal();
+
+		expect(scope.showModal).toEqual(true);
 	});
 
 });

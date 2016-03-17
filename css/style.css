@@ -9,13 +9,66 @@ Preview
 html         { overflow-y:hidden; }
 .page        { 
     bottom:0; 
-
+    padding-left: 10px;
+    padding-right: 10px;
     position:absolute;
-    text-align:center;
     width:100%; 
     height: calc(100% - 50px);
 }
 
+input {
+    width: 200px;
+}
+
+.styled-select {
+    width: 200px;
+}
+
+input[type=radio] {
+    width: 30px;
+}
+
+input[type=checkbox] {
+    width: 30px;
+}
+
+.input-group {
+    width: 200px;
+}
+
+.url {
+    width: 300px;
+}
+
+
+.row {
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.glyphicon.glyphicon-plus {
+    font-size: 25px;
+}
+
+.gylphicontextopen {
+    font-size: 25px;
+    color: blue;
+}
+
+.gylphicontextclose {
+    font-size: 25px;
+    color: red;
+}
+
+
+
+#register-content {
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+   /* width: 200px;
+    height: 150px;    */
+}
 
 .navbar-brand {
          font-size:1.8em;
@@ -41,6 +94,12 @@ ul .dropdown-menu li a{
     color: white;
 }
 
+.title_text {
+    text-align:center;
+    font-size: 2.0em;
+    color: black;
+
+}
 
 
         

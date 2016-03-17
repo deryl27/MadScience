@@ -1,0 +1,304 @@
+<div>
+
+	<div class="row title_text">
+	Register as Mad Scientist
+	</div>
+
+
+	<form  name="form" novalidate>	
+		<div class="row">
+
+			<a ng-show="personalDetails" class="gylphicontextopen" ng-click="togglePersonalDetails()">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true" ></span> Personal Details
+			</a>
+			<a ng-hide="personalDetails" class="gylphicontextclose" ng-click="togglePersonalDetails()">
+				<span class="glyphicon glyphicon-minus" aria-hidden="true" ></span> Personal Details
+			</a>	
+
+			<div id="register-content" ng-hide="personalDetails">
+				<div class="row">
+					<div class="col-md-6">
+						<label for="user">Username</label>
+					</div>
+					<div class="col-md-6">
+						<label for="gender" >Gender</label>
+					</div>	
+				</div>
+				<div class="row">	
+					<div class="col-md-6">	
+						<input type="text" name="username" ng-model="user.userName" required>
+						<span style="color:red" ng-show="form.username.$touched && form.username.$invalid">
+							<span ng-show="form.username.$error.required">Username is required.</span>
+						</span>
+					</div>
+					<div class="col-md-6">
+						<span><input type="radio" ng-model="user.gender" value="male"/>Male</span>
+      					<span><input type="radio" ng-model="user.gender" value="female"/>Female</span>
+					</div>
+				</div>		
+					
+				
+				<br/>
+				<div class="row">
+					<div class="col-md-6">
+						<label for="password">Password</label>
+					</div>
+					<div class="col-md-6">
+						<label for="birthday"> Date Of Birth</label>
+					</div>				
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<input type="password" name="password" ng-model="user.userPassword" required password-directive>
+						<span ng-show="form.password.$touched">
+							<span style="color:red" ng-show="form.password.$error.required">Password is required.</span>
+						</span>
+						<span ng-hide="form.password.$error.required">
+							<span style="color:red" ng-show="form.password.$error.validpassword">Password is not valid.</span>
+						</span>	
+					</div>
+					<div class="col-md-6">
+						<p class="input-group">
+          					<input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+         					 <span class="input-group-btn">
+            					<button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+          					</span>
+        				</p>
+					</div>	
+				</div>	
+				
+				<br/>
+
+				<div class="row">
+					<div class="col-md-6">
+						<label for="confirmpassword">Confirm Password</label>
+					</div>
+				</div>	
+				<div class="row">	
+					<div class="col-md-6">
+						<input compare-to="user.userPassword" type="password" name="confirmpassword" ng-model="user.userConfirmPassword" required>
+						<span style="color:red" ng-show="form.confirmpassword.$error.required && form.confirmpassword.$touched">Please confirm your password.</span>
+	   					<span style="color:red" ng-show="!form.confirmpassword.$error.required && form.confirmpassword.$error.errorCompareTo && form.password.$dirty">Passwords do not match.</span>
+	   				</div>	
+				</div>
+
+				<br/>
+				<div class="row">
+					<div class="col-md-6">
+						<label for="email">Email</label>
+					</div>
+					<div class="col-md-6">
+						<label for="confirmemail">Confirm Email</label>
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col-md-6">
+						<input type="email" name="email" ng-model="user.email" required>
+						<span style="color:red" ng-show="form.email.$touched && form.email.$invalid">
+							<span ng-show="form.email.$error.required">Email is required.</span>
+							<span ng-show="form.email.$error.email">Invalid email address.</span>
+						</span>
+					</div>
+					<div class="col-md-6">
+						<input compare-to="user.email" type="email" name="confirmemail" ng-model="user.confirmemail" required>
+						<span style="color:red" ng-show="form.confirmemail.$error.required && form.confirmemail.$touched">Please confirm your email.</span>
+	   					<span style="color:red" ng-show="!form.confirmemail.$error.required && form.confirmemail.$error.errorCompareTo && form.email.$dirty">Email do not match.</span>
+					</div>		
+				</div> 
+				<br/>
+
+				<div class="row">
+					<div class="col-md-12">
+					<label for="emailsetting">Email Setting       </label>
+					<span><input type="radio" ng-model="user.emailSetting" value="single"/>Single
+					</span>
+      				<span><input type="radio" ng-model="user.emailSetting" value="daily"/>Daily Digest
+      				</span>
+      				<span><input type="radio" ng-model="user.emailSetting" value="weekly"/>Weekly Digest
+      				</span>
+      				</div>
+				</div>
+			</div>	
+		</div>
+		<!-- DEMOGRAPHIC CONTENTS -->
+		<div class ="row">
+			<a ng-show="demographicDetails" class="gylphicontextopen" ng-click="toggleDemographicDetails()">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true" ></span> Demographic Details
+			</a>
+			<a ng-hide="demographicDetails" class="gylphicontextclose" ng-click="toggleDemographicDetails()">
+				<span class="glyphicon glyphicon-minus" aria-hidden="true" ></span> Demographic Details
+			</a>
+
+			<div id="register-content" ng-hide="demographicDetails">
+				<div class="row">
+					<div class="col-md-6">
+						<label for="user">Nationality</label>
+					</div>
+					<div class="col-md-6">
+						<label for="gender" >Country of Residence</label>
+					</div>	
+				</div>
+				<div class="row">	
+					<div class="col-md-6">	
+						<select class="styled-select" ng-model="user.nationality" ng-options="country for country in countries">
+						</select>
+					</div>
+					<div class="col-md-6 styled-select">
+						<select class="styled-select" ng-model="user.country" ng-options="country for country in countries">
+						</select>
+					</div>
+				</div>		
+					
+				
+				<br/>
+
+				<div class="row">
+					<div class ="col-md-12">
+						<label for="Race">Race</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1">
+					<span><input type="radio" ng-model="user.race" value="american" /></span>
+					</div>
+					<div class="col-md-10">American Indian or Alaska Native: A person having origins in any of the original peoples of North and South America (including Central America), and who maintains tribal affiliation or community attachment. 
+					</div>		
+				</div>
+				<div class="row">
+					<div class="col-md-1">
+					<span><input type="radio" ng-model="user.race" value="pacific" /></span>
+					</div>
+					<div class="col-md-10">Native Hawaiian or Other Pacific Islander: A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. 
+					</div>		
+				</div>
+				<div class="row">
+					<div class="col-md-1">
+					<span><input type="radio" ng-model="user.race" value="asian" /></span>
+					</div>
+					<div class="col-md-10">Asian: A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam.
+					</div>		
+				</div>
+				<div class="row">
+					<div class="col-md-1">
+					<span><input type="radio" ng-model="user.race" value="blackafrican" /></span>
+					</div>
+					<div class="col-md-10">Black or African American: A person having origins in any of the black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American." 
+					</div>		
+				</div>
+				<div class="row">
+					<div class="col-md-1">
+					<span><input type="radio" ng-model="user.race" value="white" /></span>
+					</div>
+					<div class="col-md-10">White: A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.
+					</div>		
+				</div>
+
+				<br/>
+
+				<div class="row">
+					<div class="col-md-12">
+					 <label>Social Media</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1">
+						FaceBook
+					</div>
+					<div class="col-md-10">
+						<input class="url" type="text" name="user" ng-model="user.facebook">
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-1">
+						Twitter
+					</div>
+					<div class="col-md-10">
+						<input class="url" type="text" name="user" ng-model="user.twitter">
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-1">
+						Instagram
+					</div>
+					<div class="col-md-10">
+						<input class="url" type="text" name="user" ng-model="user.instagram">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1">
+						LinkedIn
+					</div>
+					<div class="col-md-10">
+						<input class="url" type="text" name="user" ng-model="user.linkedin">
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+		<!-- INTEREST -->
+		<div class="row">
+
+			<a ng-show="interestDetails" class="gylphicontextopen" ng-click="togglesinterestDetails()">
+				<span class="glyphicon glyphicon-plus" aria-hidden="true" ></span> Activities
+			</a>
+			<a ng-hide="interestDetails" class="gylphicontextclose" ng-click="togglesinterestDetails()">
+				<span class="glyphicon glyphicon-minus" aria-hidden="true" ></span> Activities
+			</a>	
+
+			<div id="register-content" ng-hide="interestDetails">
+				<div class="row col-md-12">
+					<label>Interests</label>
+				</div>
+				
+				<table>
+  				 	<tr ng-repeat="role in roles">
+           				<td><input type="checkbox" ng-model="user.interest[role]">{{role}}</td> 
+        		 	</tr>
+  				</table>
+
+  				<br/>
+
+  				<div class="row">
+					<label>How often do you play games?</label>
+				</div>
+				<div class="row">
+					<span><input type="radio" ng-model="user.pro" value="notveryoften" />Not Very Often</span>
+				</div>
+				<div class="row">		
+      				<span><input type="radio" ng-model="user.pro" value="often"/>Often</span>
+				</div>
+
+  				<br/>
+
+  				<div class="row col-md-12">
+					<label>What type of games do you like to play?</label>
+				</div>
+				
+				<table>
+  				 	<tr ng-repeat="g in games">
+           				<td><input type="checkbox" ng-model="user.game[g]">{{g}}</td> 
+        		 	</tr>
+  				</table>
+			</div>
+
+			
+
+		</div>	
+
+		<div class="row">
+			<input type="submit" ng-click="register(user)" ng-disabled="form.username.$invalid || form.email.$invalid
+			|| form.password.$error.required || form.password.$error.validpassword || form.confirmpassword.$error.required || form.confirmpassword.$error.errorCompareTo || form.confirmemail.$error.required || 
+			form.confirmemail.$error.errorCompareTo" >
+
+		</div>
+
+		
+
+	</form>	
+
+</div>

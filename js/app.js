@@ -1,13 +1,10 @@
-var madscienceapp = angular.module('MadScienceApp' , ['ngRoute' , 'ngAnimate']);
+var madscienceapp = angular.module('MadScienceApp' , ['ngRoute' , 'ngAnimate', 'ui.bootstrap']);
 
 var dummyemail = 'mad@gmail.com';
 var dummypassword = 'a_123456';
 
 madscienceapp.controller('MadScienceController', ['$scope', function($scope)
 {
-
-   console.log('GOD IS GREAT HHHHHHHH');
-  //console.log('GOD IS GREAT');
   $scope.showModal = false;
   $scope.errormsg = false;
   $scope.currentUser = null;
@@ -42,6 +39,11 @@ madscienceapp.config(function($routeProvider) {
             templateUrl: 'views/page-home.html',
             controller: 'mainController'
         })
+        .when('/register', {
+            templateUrl: 'views/page-register.html',
+            controller: 'registerController'
+
+        });
 });
 
 madscienceapp.directive('modal', function () {
@@ -76,7 +78,3 @@ madscienceapp.directive('modal', function () {
     };
   });
 
-
-madscienceapp.controller('mainController', function($scope) {
-    $scope.pageClass = 'page-home';
-});
