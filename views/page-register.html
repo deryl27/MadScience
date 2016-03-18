@@ -6,16 +6,11 @@
 
 
 	<form  name="form" novalidate>	
-		<div class="row">
+		<div class="row" ng-show="personalDetails">
 
-			<a ng-show="personalDetails" class="gylphicontextopen" ng-click="togglePersonalDetails()">
-				<span class="glyphicon glyphicon-plus" aria-hidden="true" ></span> Personal Details
-			</a>
-			<a ng-hide="personalDetails" class="gylphicontextclose" ng-click="togglePersonalDetails()">
-				<span class="glyphicon glyphicon-minus" aria-hidden="true" ></span> Personal Details
-			</a>	
+			<span class="gylphicontextopen" aria-hidden="true" >Personal Details</span> 
 
-			<div id="register-content" ng-hide="personalDetails">
+			<div id="register-content">
 				<div class="row">
 					<div class="col-md-6">
 						<label for="user">Username</label>
@@ -118,18 +113,25 @@
       				</span>
       				</div>
 				</div>
+				<br/>
+				<div class= "row">
+					<div class="col-md-6">
+					</div>
+					<div class="col-md-6">
+						<button ng-click="togglePersonalDetails()" ng-disabled="form.username.$invalid || form.email.$invalid
+			|| form.password.$error.required || form.password.$error.validpassword || form.confirmpassword.$error.required || form.confirmpassword.$error.errorCompareTo || form.confirmemail.$error.required || 
+			form.confirmemail.$error.errorCompareTo" class="btn btn-default center-block btn-width">Next</button>
+					</div>
+				</div>
 			</div>	
 		</div>
-		<!-- DEMOGRAPHIC CONTENTS -->
-		<div class ="row">
-			<a ng-show="demographicDetails" class="gylphicontextopen" ng-click="toggleDemographicDetails()">
-				<span class="glyphicon glyphicon-plus" aria-hidden="true" ></span> Demographic Details
-			</a>
-			<a ng-hide="demographicDetails" class="gylphicontextclose" ng-click="toggleDemographicDetails()">
-				<span class="glyphicon glyphicon-minus" aria-hidden="true" ></span> Demographic Details
-			</a>
 
-			<div id="register-content" ng-hide="demographicDetails">
+
+		<!-- DEMOGRAPHIC CONTENTS -->
+		<div class ="row" ng-show="demographicDetails">
+			<span  class="gylphicontextopen" aria-hidden="true" >Demographic Details</span> 
+
+			<div id="register-content">
 				<div class="row">
 					<div class="col-md-6">
 						<label for="user">Nationality</label>
@@ -236,21 +238,22 @@
 						<input class="url" type="text" name="user" ng-model="user.linkedin">
 					</div>
 				</div>
-
-
+				<br/>
+				<div class= "row">
+					<div class="col-md-6">
+						<button ng-click="toggleBackDemographicDetails()" class="btn btn-default center-block btn-width">Previous</button>
+					</div>
+					<div class="col-md-6">
+						<button ng-click="toggleDemographicDetails()"  class="btn btn-default center-block btn-width">Next</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- INTEREST -->
-		<div class="row">
-
-			<a ng-show="interestDetails" class="gylphicontextopen" ng-click="togglesinterestDetails()">
-				<span class="glyphicon glyphicon-plus" aria-hidden="true" ></span> Activities
-			</a>
-			<a ng-hide="interestDetails" class="gylphicontextclose" ng-click="togglesinterestDetails()">
-				<span class="glyphicon glyphicon-minus" aria-hidden="true" ></span> Activities
-			</a>	
-
-			<div id="register-content" ng-hide="interestDetails">
+		<div class="row" ng-show="interestDetails" >
+			<span class="gylphicontextopen" class="glyphicon glyphicon-plus" aria-hidden="true" >Activities</span> 
+			
+			<div id="register-content">
 				<div class="row col-md-12">
 					<label>Interests</label>
 				</div>
@@ -285,19 +288,18 @@
         		 	</tr>
   				</table>
 			</div>
-
-			
-
-		</div>	
-
-		<div class="row">
-			<input type="submit" ng-click="register(user)" ng-disabled="form.username.$invalid || form.email.$invalid
+			<br/>
+			<div class= "row">
+					<div class="col-md-6">
+						<button ng-click="togglesBackinterestDetails()" class="btn btn-default center-block btn-width">Previous</button>
+					</div>
+					<div class="col-md-6">
+						<button ng-click="register(user)" ng-disabled="form.username.$invalid || form.email.$invalid
 			|| form.password.$error.required || form.password.$error.validpassword || form.confirmpassword.$error.required || form.confirmpassword.$error.errorCompareTo || form.confirmemail.$error.required || 
-			form.confirmemail.$error.errorCompareTo" >
-
-		</div>
-
-		
+			form.confirmemail.$error.errorCompareTo"  class="btn btn-success center-block btn-width">Submit</button>
+					</div>
+				</div>
+		</div>	
 
 	</form>	
 

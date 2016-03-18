@@ -2,43 +2,65 @@ describe('Main Test', function() {
 
 	beforeEach(module('MadScienceApp'));
 
-	var registerController,
-	scope;
+	var registerController, scope, location;
 
-
-
-	beforeEach(inject (function ($rootScope, $controller) {
+	beforeEach(inject (function ($rootScope, $controller, $location) {
 		scope = $rootScope.$new();
-
-	
-
+		
 		registerController = $controller('registerController', {
-		'$scope': scope
+		'$scope': scope,
+		'$location': location
 		});
 	}));
 
 	it('Person Details validate the toggle', function () {
-		scope.personalDetails = false;
+		scope.personalDetails = true;
+		scope.demographicDetails = false;
+		scope.interestDetails = false;
 
 		scope.togglePersonalDetails();
 
-		expect(scope.personalDetails).toEqual(true);
+		expect(scope.personalDetails).toEqual(false);
+		expect(scope.demographicDetails).toEqual(true);
+		expect(scope.interestDetails).toEqual(false);
 	});
 
 	it('DemoGraphic Details validate the toggle', function () {
-		scope.demographicDetails = false;
+		scope.personalDetails = false;
+		scope.demographicDetails = true;
+		scope.interestDetails = false;
 		
 		scope.toggleDemographicDetails();
 
-		expect(scope.demographicDetails).toEqual(true);
+		expect(scope.personalDetails).toEqual(false);
+		expect(scope.demographicDetails).toEqual(false);
+		expect(scope.interestDetails).toEqual(true);
+
+	});
+
+	it('DemoGraphic Details validate the toggle to personalDetails', function () {
+		scope.personalDetails = false;
+		scope.demographicDetails = true;
+		scope.interestDetails = false;
+		
+		scope.toggleBackDemographicDetails();
+
+		expect(scope.personalDetails).toEqual(true);
+		expect(scope.demographicDetails).toEqual(false);
+		expect(scope.interestDetails).toEqual(false);
+
 	});
 
 	it('Activities Details validate the toggle', function () {
-		scope.interestDetails = false;
+		scope.personalDetails = false;
+		scope.demographicDetails = false;
+		scope.interestDetails = true;
 		
-		scope.togglesinterestDetails();
+		scope.togglesBackinterestDetails();
 
-		expect(scope.interestDetails).toEqual(true);
+		expect(scope.personalDetails).toEqual(false);
+		expect(scope.demographicDetails).toEqual(true);
+		expect(scope.interestDetails).toEqual(false);
 	});
 
 	it('Clear of Date Field', function () {
@@ -64,5 +86,14 @@ describe('Main Test', function() {
 
 		expect(scope.popup1.opened).toEqual(true);
 	});
+
+	// it('test the location after submit click', function() {
+	// 	location.path('/register');
+		
+	// 	scope.register({});
+
+	// 	expect(location.path).toEqual('');
+
+	// });
 
 });

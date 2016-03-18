@@ -1,66 +1,72 @@
 madscienceapp.controller('registerController', function($scope, $location) {
     $scope.pageClass = 'page-register';
 
-    $scope.personalDetails = false;
-    $scope.demographicDetails = true;
-    $scope.interestDetails = true;
+    $scope.personalDetails = true;
+    $scope.demographicDetails = false;
+    $scope.interestDetails = false;
 
     $scope.roles = ['Biology','Computer Science', 'Physics', 'Psychology', 'Sports'];
     $scope.gameplayed = ['Not very often','Often'];
     $scope.games = ['Board Games', 'Card Games', 'Platformers', 'Shooters'];
 
+    $scope.today = function() {
+    $scope.dt = new Date();
+    };
+  $scope.today();
+
     $scope.user = {
-    	interest: [],
-    	game: [],
-    	gender: 'male'
+     //  userName: 'deryl',
+     //  email: 'deryl1234@gmail.com',
+     //  confirmemail: 'deryl1234@gmail.com',
+     //  userPassword: '12345678',
+     //  userConfirmPassword: '12345678',
+     //  birthday: $scope.dt,
+    	// interest: {'Biology' : true,'Computer Science' : true},
+    	// game: [],
+     //  emailSetting: 'single',
+     //  nationality: 'India',
+     //  country: 'China',
+  
+      gender: 'male',
 
     };
-
-     $scope.lov_state = [
-        { 'description': 'Alabama'},
-        { 'description': 'Florida'},
-        { 'description': 'California'},
-        { 'description': 'Delaware'}
-    ];
 
     $scope.countries = ["USA", "UK", "India", "China"];
 
     $scope.togglePersonalDetails = function (){
-    	$scope.personalDetails = !$scope.personalDetails;
-    	// $scope.demographicDetails = true;
-    	// $scope.interestDetails = true;
-    	console.log(">>> INSIDE THE TOGGLE");
+    	$scope.personalDetails = false;
+      $scope.interestDetails = false;
+      $scope.demographicDetails = true;
     };
 
      $scope.toggleDemographicDetails = function (){
-    	$scope.demographicDetails = !$scope.demographicDetails;
-    	// $scope.personalDetails = true;
-    	// $scope.interestDetails = true;
-    	console.log(">>> INSIDE THE TOGGLE");
-    	console.log(">>>" , $scope.user.interest);
+    	$scope.demographicDetails = false;
+    	$scope.personalDetails = false;
+      $scope.interestDetails = true;
+    	
     };
 
-    $scope.togglesinterestDetails = function (){
-    	$scope.interestDetails = !$scope.interestDetails;
-    	if($scope.interestDetails)
-    		$scope.personalDetails = false;
+    $scope.toggleBackDemographicDetails = function (){
+      $scope.demographicDetails = false;
+      $scope.personalDetails = true;
+      $scope.interestDetails = false;
+    };
+
+    $scope.togglesBackinterestDetails = function (){
+      $scope.personalDetails = false;
     	$scope.demographicDetails = true;
-    	// $scope.demographicDetails = !$scope.demographicDetails;
-    	// $scope.personalDetails = true;
-    	
+      $scope.interestDetails = false;
     };
 
     $scope.register = function(user) {
     	console.log("user >>>>>>>>" , user);
+      //localStorageService.set('Credentials', user.userName+":"+user.userPassword);
     	$location.path('')
     };
 
     
 
-     $scope.today = function() {
-    $scope.dt = new Date();
-  };
-  $scope.today();
+ 
 
   $scope.clear = function() {
     $scope.dt = null;

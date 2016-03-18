@@ -16,6 +16,10 @@ html         { overflow-y:hidden; }
     height: calc(100% - 50px);
 }
 
+.btn-width {
+    width: 100px;
+}
+
 input {
     width: 200px;
 }
@@ -53,6 +57,7 @@ input[type=checkbox] {
 .gylphicontextopen {
     font-size: 25px;
     color: blue;
+    margin-left: 30px;
 }
 
 .gylphicontextclose {
