@@ -55,23 +55,23 @@ describe('Directive: compareto', function () {
 
   }));
 
-  describe('Compare To', function() {
+  // describe('Compare To', function() {
 
-    it('Should contain two elements with the same value', function() {
+  //   it('Should contain two elements with the same value', function() {
 
-      // element target
-      scope.form.password.$setViewValue('Fd565$dD');
-      scope.$digest();
-      expect(scope.form.confirmPassword.$valid).toEqual(true);
-    });
+  //     // element target
+  //     scope.form.password.$setViewValue('Fd565$dD');
+  //     scope.$digest();
+  //     expect(scope.form.confirmPassword.$valid).toEqual(true);
+  //   });
 
-    it('Should contain two elements with the same value', function() {
+  //   it('Should contain two elements with the same value', function() {
 
-      // element target
-      scope.form.password.$setViewValue('Fd565$d');
-      scope.$digest();
-      expect(scope.form.confirmPassword.$valid).toEqual(false);
-    });
+  //     // element target
+  //     scope.form.password.$setViewValue('Fd565$d');
+  //     scope.$digest();
+  //     expect(scope.form.confirmPassword.$valid).toEqual(false);
+  //   });
 
-  });
+  // });
 });
