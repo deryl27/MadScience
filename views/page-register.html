@@ -20,12 +20,16 @@
 					</div>	
 				</div>
 				<div class="row">	
-					<div class="col-md-6">	
-						<input type="text" name="username" ng-model="user.userName" required>
+
+
+					<div class="col-md-6 controls">	
+						<input type="text" name="username" ng-model="user.userName" class="form-control" required>
+						<p class="help-block">Username can contain any letters or numbers </p>
 						<span style="color:red" ng-show="form.username.$touched && form.username.$invalid">
 							<span ng-show="form.username.$error.required">Username is required.</span>
 						</span>
 					</div>
+
 					<div class="col-md-6">
 						<span><input type="radio" ng-model="user.gender" value="male"/>Male</span>
       					<span><input type="radio" ng-model="user.gender" value="female"/>Female</span>
