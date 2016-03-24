@@ -41,8 +41,9 @@ describe('Directive: compareto', function () {
 
   var scope;
 
-  beforeEach(inject(function($compile, $rootScope) {
+  beforeEach(inject(function($compile, $rootScope, $httpBackend) {
     scope = $rootScope.$new();
+    httpBackend = $httpBackend;
     var element = angular.element(
       '<form name="form">' +
       '<input ng-model="model.password" type="text" name="password" id="password">' +
@@ -55,23 +56,25 @@ describe('Directive: compareto', function () {
 
   }));
 
-  // describe('Compare To', function() {
+  describe('Compare To', function() {
 
-  //   it('Should contain two elements with the same value', function() {
+    it('Should contain two elements with the same value', function() {
 
-  //     // element target
-  //     scope.form.password.$setViewValue('Fd565$dD');
-  //     scope.$digest();
-  //     expect(scope.form.confirmPassword.$valid).toEqual(true);
-  //   });
+      // element target
+      httpBackend.whenGET('views/page-home.html').respond(200, '');
+      scope.form.password.$setViewValue('Fd565$dD');
+      scope.$digest();
+      expect(scope.form.confirmPassword.$valid).toEqual(true);
+    });
 
-  //   it('Should contain two elements with the same value', function() {
+    it('Should contain two elements with the same value', function() {
 
-  //     // element target
-  //     scope.form.password.$setViewValue('Fd565$d');
-  //     scope.$digest();
-  //     expect(scope.form.confirmPassword.$valid).toEqual(false);
-  //   });
+      // element target
+      httpBackend.whenGET('views/page-home.html').respond(200, '');
+      scope.form.password.$setViewValue('Fd565$d');
+      scope.$digest();
+      expect(scope.form.confirmPassword.$valid).toEqual(false);
+    });
 
-  // });
+  });
 });
