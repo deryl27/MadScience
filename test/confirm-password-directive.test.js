@@ -1,10 +1,11 @@
 describe('Register Flow', function() {
-  var $scope, form;
+  var $scope, form, httpBackend;
   
   beforeEach(module('MadScienceApp'));
 
-  beforeEach(inject(function($compile, $rootScope) {
+  beforeEach(inject(function($compile, $rootScope, $httpBackend) {
     $scope = $rootScope;
+    httpBackend = $httpBackend;
     var element = angular.element(
       '<form name="form">' +
       '<input ng-model="user.confirmpassword" name="confirmpassword"  required>' +
@@ -18,6 +19,7 @@ describe('Register Flow', function() {
   describe('confirm-password-directive', function() {
     it('should be valid when confirm password field contains some value', function() {
       form.confirmpassword.$setViewValue('123456789');
+      httpBackend.whenGET('views/page-home.html').respond(200, '');
       $scope.$digest();
       expect($scope.user.confirmpassword).toEqual('123456789');
       expect(form.confirmpassword.$valid).toBe(true);
