@@ -4,7 +4,7 @@ describe('Register Flow', function() {
   beforeEach(module('MadScienceApp'));
 
   beforeEach(inject(function($compile, $rootScope, $httpBackend) {
-    $scope = $rootScope;
+    $scope = $rootScope.$new();
     httpBackend = $httpBackend;
     var element = angular.element(
       '<form name="form">' +
