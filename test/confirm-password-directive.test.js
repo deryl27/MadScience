@@ -18,8 +18,8 @@ describe('Register Flow', function() {
 
   describe('confirm-password-directive', function() {
     it('should be valid when confirm password field contains some value', function() {
-      form.confirmpassword.$setViewValue('123456789');
       httpBackend.whenGET('views/page-home.html').respond(200, '');
+      form.confirmpassword.$setViewValue('123456789');
       $scope.$digest();
       expect($scope.user.confirmpassword).toEqual('123456789');
       expect(form.confirmpassword.$valid).toBe(true);
