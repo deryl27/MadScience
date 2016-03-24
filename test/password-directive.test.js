@@ -26,6 +26,7 @@ describe('Register Flow', function() {
     });
 
     it('should be invalid when input field contains no value', function() {
+      httpBackend.whenGET('views/page-home.html').respond(200, '');
       $scope.$digest();
       expect($scope.user.password).toEqual(null);
       expect(form.password.$valid).toBe(false);
