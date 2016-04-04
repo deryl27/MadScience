@@ -58,9 +58,13 @@ madscienceapp.config(function($routeProvider) {
 
         })
         .when('/edit', {
-            templateUrl: 'views/page-register.html',
-            controller: 'registerController'
+            templateUrl: 'views/page-profile.html',
+            controller: 'profileController'
 
+        })
+        .when('/experiments', {
+            templateUrl: 'views/experiment.html',
+            controller: 'ExperimentController'
         });
 });
 

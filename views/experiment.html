@@ -1,0 +1,103 @@
+<b> Experiment Name <b>
+
+
+
+  <div class="container-fluid">
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a ng-click="scrollTo('section1')">Experiment</a></li>
+          <li><a ng-click="scrollTo('section2')">Description</a></li>
+          <li><a ng-click="scrollTo('section3')">Stats</a></li>
+          <li><a ng-click="scrollTo('section4')">Comments</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ 
+
+ <div id="section1" class="container-fluid">
+  <h2>Experiment</h2>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+
+<div id="section2" class="container-fluid">
+  <h2>Description</h2>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+
+<div id="section3" class="container-fluid">
+  <h2>Stats</h2>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+
+
+<div id="section4" class="container-fluid">
+  <h2>Comments</h2>
+  
+    <div ng-repeat="c in commentData.comments">
+       <div class = "row">
+       		<span class="commentName">{{c.name}} </span> 
+       		{{c.datetime | date:'yyyy-MM-dd'}}
+       </div>
+       <div>
+       		{{c.comment}}
+       </div>
+       <br/>
+       <br/>
+
+       <div class ="commentsmargin" ng-repeat = "r in c.replies">
+        	<div class = "row">
+       			<span class="commentName">{{r.name}} </span> 
+       			{{r.datetime}}
+       		</div>
+        <div>
+        	{{r.comment}}
+        </div>
+       
+       <br/>
+
+       </div>
+
+       <div class="commentsmargin">
+       	 	<a ng-show="isReply" ng-click="isReply = !isReply">Reply</a>
+       	 		<div ng-hide="isReply">
+       	 			<div class="row">
+       	 				<textarea rows="4" cols="100" ng-model="commentArea"></textarea>
+       	 			</div>
+       	 			<div class="row">
+       	 				<span style="color:red" ng-show="showCommentError">"Invalid Comment"</span>
+       	 			</div>
+       	 			<div class="row">
+       	 				<button class="col-md-1" ng-click="commentSend(c.id , commentArea); commentArea =''">Comment</button>
+       	 				<a class="col-md-1" ng-click="isReply = !isReply">Cancel</a>
+       	 			</div>	
+       	 		</div>	
+       </div>
+
+       <br/>
+       <br/>
+
+
+    </div>
+
+    
+    <div class="row">
+       	<textarea rows="4" cols="100" ng-model="commentMainArea"></textarea>
+    </div>
+       	 	
+    <div class="row">
+       	<span style="color:red" ng-show="showCommentMainError">"Invalid Comment"</span>
+    </div>
+    <div class="row">
+       	<button class="col-md-1" ng-click="commentMainSend(commentMainArea)">Comment</button>
+    </div>	
+       	 
+   
+
+</div>
