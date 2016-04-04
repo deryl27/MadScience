@@ -1,14 +1,9 @@
 <div>
-
-	<div class="row title_text">
-	Register as Mad Scientist
-	</div>
-
-
 	<form  name="form" novalidate>	
 		<div class="row" ng-show="personalDetails">
-
-			<span class="gylphicontextopen" aria-hidden="true" >Personal Details</span> 
+			<div id="legend " style="margin-top: 20px;margin-left: 50px;">
+              <legend>Personal Details</legend>
+            </div>
 
 			<div id="register-content">
 				<div class="row">
@@ -21,13 +16,15 @@
 				</div>
 				<div class="row">	
 
+					<div class="col-md-6" ng-class="{'has-success' : inputModel}">	
+						<input type="text" name="username" ng-model="inputModel" ng-model="user.userName" placeholder="Username can contain any letters or numbers, without spaces" class="form-control" required
+						tooltip-trigger="mouseenter" >
 
-					<div class="col-md-6 controls">	
-						<input type="text" name="username" ng-model="user.userName" class="form-control" required>
-						<p class="help-block">Username can contain any letters or numbers </p>
-						<span style="color:red" ng-show="form.username.$touched && form.username.$invalid">
+             			<span style="color: #d9534f;" ng-show="form.username.$touched && form.username.$invalid">
+
 							<span ng-show="form.username.$error.required">Username is required.</span>
 						</span>
+       
 					</div>
 
 					<div class="col-md-6">
@@ -36,8 +33,7 @@
       					<span><input type="radio" ng-model="user.gender" value="other"/>Other</span>
 					</div>
 				</div>		
-					
-				
+
 				<br/>
 				<div class="row">
 					<div class="col-md-6">
@@ -48,13 +44,13 @@
 					</div>				
 				</div>
 				<div class="row">
-					<div class="col-md-6">
-						<input type="password" name="password" ng-model="user.userPassword" required password-directive>
+					<div class="col-md-6" >
+						<input class="form-control" type="password" placeholder="Password should be at least 6 characters" name="password" ng-model="user.userPassword" required password-directive>
 						<span ng-show="form.password.$touched">
-							<span style="color:red" ng-show="form.password.$error.required">Password is required.</span>
+							<span style="color:#d9534f" ng-show="form.password.$error.required">Password is required.</span>
 						</span>
 						<span ng-hide="form.password.$error.required">
-							<span style="color:red" ng-show="form.password.$error.validpassword">Password is not valid.</span>
+							<span style="color:#d9534f" ng-show="form.password.$error.validpassword">Password is not valid.</span>
 						</span>	
 					</div>
 					<div class="col-md-6">
@@ -76,9 +72,9 @@
 				</div>	
 				<div class="row">	
 					<div class="col-md-6">
-						<input compare-to="user.userPassword" type="password" name="confirmpassword" ng-model="user.userConfirmPassword" required>
-						<span style="color:red" ng-show="form.confirmpassword.$error.required && form.confirmpassword.$touched">Please confirm your password.</span>
-	   					<span style="color:red" ng-show="!form.confirmpassword.$error.required && form.confirmpassword.$error.errorCompareTo && form.password.$dirty">Passwords do not match.</span>
+						<input class="form-control" placeholder="Please confirm password" compare-to="user.userPassword" type="password" name="confirmpassword" ng-model="user.userConfirmPassword" required>
+						<span style="color:#d9534f" ng-show="form.confirmpassword.$error.required && form.confirmpassword.$touched">Please confirm your password.</span>
+	   					<span style="color:#d9534f" ng-show="!form.confirmpassword.$error.required && form.confirmpassword.$error.errorCompareTo && form.password.$dirty">Passwords do not match.</span>
 	   				</div>	
 				</div>
 
@@ -93,16 +89,17 @@
 				</div>	
 				<div class="row">
 					<div class="col-md-6">
-						<input type="email" name="email" ng-model="user.email" required>
-						<span style="color:red" ng-show="form.email.$touched && form.email.$invalid">
+						<input placeholder="example@mail.com" class="form-control" type="email" name="email" ng-model="user.email" required>
+						<span style="color:#d9534f" ng-show="form.email.$touched
+						 && form.email.$invalid">
 							<span ng-show="form.email.$error.required">Email is required.</span>
 							<span ng-show="form.email.$error.email">Invalid email address.</span>
 						</span>
 					</div>
 					<div class="col-md-6">
-						<input compare-to="user.email" type="email" name="confirmemail" ng-model="user.confirmemail" required>
-						<span style="color:red" ng-show="form.confirmemail.$error.required && form.confirmemail.$touched">Please confirm your email.</span>
-	   					<span style="color:red" ng-show="!form.confirmemail.$error.required && form.confirmemail.$error.errorCompareTo && form.email.$dirty">Email do not match.</span>
+						<input class="form-control" placeholder="Please confirm email" compare-to="user.email" type="email" name="confirmemail" ng-model="user.confirmemail" required>
+						<span style="color:#d9534f" ng-show="form.confirmemail.$error.required && form.confirmemail.$touched">Please confirm your email.</span>
+	   					<span style="color:#d9534f" ng-show="!form.confirmemail.$error.required && form.confirmemail.$error.errorCompareTo && form.email.$dirty">Email do not match.</span>
 					</div>		
 				</div> 
 				<br/>
@@ -122,10 +119,10 @@
 				<div class= "row">
 					<div class="col-md-6">
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-4" style="float: right;">
 						<button ng-click="togglePersonalDetails()" ng-disabled="form.username.$invalid || form.email.$invalid
 			|| form.password.$error.required || form.password.$error.validpassword || form.confirmpassword.$error.required || form.confirmpassword.$error.errorCompareTo || form.confirmemail.$error.required || 
-			form.confirmemail.$error.errorCompareTo" class="btn btn-default center-block btn-width">Next</button>
+			form.confirmemail.$error.errorCompareTo" class="btn btn-success center-block btn-width btn-block btn-lg">Next</button>
 					</div>
 				</div>
 			</div>	
@@ -134,70 +131,79 @@
 
 		<!-- DEMOGRAPHIC CONTENTS -->
 		<div class ="row" ng-show="demographicDetails">
-			<span  class="gylphicontextopen" aria-hidden="true" >Demographic Details</span> 
+			<div id="legend " style="margin-top: 20px;margin-left: 50px;">
+              <legend>Demographic Details</legend>
+            </div>
 
 			<div id="register-content">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<label for="user">Nationality</label>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<label for="gender" >Country of Residence</label>
 					</div>	
 				</div>
+
+
 				<div class="row">	
-					<div class="col-md-6">	
-						<select class="styled-select" ng-model="user.nationality" ng-options="country for country in countries">
+					<div class="col-md-4 ">	
+						<select class="styled-select form-control" ng-model="user.nationality" ng-options="country for country in countries">
+							<option value="">Choose the country you born</option>
 						</select>
 					</div>
-					<div class="col-md-6 styled-select">
-						<select class="styled-select" ng-model="user.country" ng-options="country for country in countries">
+					<div class="col-md-4 styled-select">
+						<select class="styled-select form-control" ng-model="user.country" ng-options="country for country in countries">
+							<option value="">Choose the country you live in</option>
 						</select>
 					</div>
 				</div>		
 					
 				
 				<br/>
-
+				<div class="bg-success" style="border-radius: 8px;" >
 				<div class="row">
-					<div class ="col-md-12">
+					<div class ="col-md-12 ">
 						<label for="Race">Race</label>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row " style="margin-top: 10px;">
 					<div class="col-md-1">
 					<span><input type="radio" ng-model="user.race" value="american" /></span>
 					</div>
-					<div class="col-md-10">American Indian or Alaska Native: A person having origins in any of the original peoples of North and South America (including Central America), and who maintains tribal affiliation or community attachment. 
+					<div class="col-md-10"><b>American Indian or Alaska Native:</b> A person having origins in any of the original peoples of North and South America (including Central America), and who maintains tribal affiliation or community attachment. 
 					</div>		
 				</div>
-				<div class="row">
+				<div class="row " style="margin-top: 10px;">
 					<div class="col-md-1">
 					<span><input type="radio" ng-model="user.race" value="pacific" /></span>
 					</div>
-					<div class="col-md-10">Native Hawaiian or Other Pacific Islander: A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. 
+					<div class="col-md-10"><b>Native Hawaiian or Other Pacific Islander:</b> A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands. 
 					</div>		
 				</div>
-				<div class="row">
+				<div class="row" style="margin-top: 10px;">
 					<div class="col-md-1">
 					<span><input type="radio" ng-model="user.race" value="asian" /></span>
 					</div>
-					<div class="col-md-10">Asian: A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam.
+					<div class="col-md-10"><b>Asian:</b> A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam.
 					</div>		
 				</div>
-				<div class="row">
+				<div class="row" style="margin-top: 10px;">
 					<div class="col-md-1">
 					<span><input type="radio" ng-model="user.race" value="blackafrican" /></span>
 					</div>
-					<div class="col-md-10">Black or African American: A person having origins in any of the black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American." 
+					<div class="col-md-10"><b>Black or African American:</b> A person having origins in any of the black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American." 
 					</div>		
 				</div>
-				<div class="row">
+				<div class="row" style="margin-top: 10px;">
 					<div class="col-md-1">
 					<span><input type="radio" ng-model="user.race" value="white" /></span>
 					</div>
-					<div class="col-md-10">White: A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.
-					</div>		
+					<div class="col-md-10"><b>White:</b> A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.
+					</div>	
+					<br>	
+					<br>
+				</div>
 				</div>
 
 				<br/>
@@ -207,7 +213,7 @@
 					 <label>Social Media</label>
 					</div>
 				</div>
-				<div class="row">
+<!-- 				<div class="row">
 					<div class="col-md-1">
 						FaceBook
 					</div>
@@ -243,31 +249,79 @@
 						<input class="url" type="text" name="user" ng-model="user.linkedin">
 					</div>
 				</div>
+ -->
+				<div class="row">
+					<div class="img" style="border-radius:15px; width: 100px;" >
+						<img src="https://www.facebookbrand.com/img/fb-art.jpg">
+					</div>
+					<div class="img" style="border-radius:15px;width: 100px;" >
+					<img src="https://lh3.ggpht.com/lSLM0xhCA1RZOwaQcjhlwmsvaIQYaP3c5qbDKCgLALhydrgExnaSKZdGa8S3YtRuVA=w300">
+					</div>
+					<div  class="img" style="border-radius:15px;width: 100px;">
+					<img  src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-256.png">
+					</div>
+					<div  class="img" style="border-radius:15px;width: 100px;">
+					<img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png">
+					</div>
+					
+					
+				</div>
+
 				<br/>
 				<div class= "row">
-					<div class="col-md-6">
-						<button ng-click="toggleBackDemographicDetails()" class="btn btn-default center-block btn-width">Previous</button>
+					<div class="col-md-4">
+						<button ng-click="toggleBackDemographicDetails()" class="btn btn-default center-block btn-width  btn-block btn-lg">Previous</button>
 					</div>
-					<div class="col-md-6">
-						<button ng-click="toggleDemographicDetails()"  class="btn btn-default center-block btn-width">Next</button>
+					<div class="col-md-4" style="float: right;">
+						<button ng-click="toggleDemographicDetails()"  class="btn btn-success center-block btn-width btn-block btn-lg">Next</button>
 					</div>
 				</div>
 			</div>
 		</div>
+
+
+
 		<!-- INTEREST -->
-		<div class="row" ng-show="interestDetails" >
-			<span class="gylphicontextopen" class="glyphicon glyphicon-plus" aria-hidden="true" >Activities</span> 
-			
-			<div id="register-content">
+<div class="row" ng-show="interestDetails" >
+	<div id="legend " style="margin-top: 20px;margin-left: 50px;">
+		<legend>Activities</legend>
+	</div>
+
+	<div id="register-content">
 				<div class="row col-md-12">
 					<label>Interests</label>
 				</div>
 				
-				<table>
+<!-- 				<table>
   				 	<tr ng-repeat="role in roles">
-           				<td><input type="checkbox" ng-model="user.interest[role]">{{role}}</td> 
+           				<td><input type="checkbox" ng-model="user.interest[role]">{{role.name}}</td> 
         		 	</tr>
-  				</table>
+  				</table> -->
+<div class="row">
+	<div class="img">
+    	<img src="http://placekitten.com/201/201" width="300" height="200">
+  		<div class="desc">Nature</div>
+	</div>
+	 	
+	 <div class="img">
+    	<img src="https://www.twoleavestea.com/blog/wp-content/uploads/2015/05/a_stack_of_books_and_a_good_cup_of_tea_by_delightfullybritish-d6w5uhj.jpg" width="300" height="200">
+  		<div class="desc">Psychology</div>
+	</div>	
+
+	<div class="img">
+    	<img src="https://i.ytimg.com/vi/nxmlAZqwQ9g/maxresdefault.jpg" width="300" height="200">
+  		<div class="desc">Sports</div>
+	</div>
+	 	
+	 <div class="img">
+    	<img src="http://www.moma.org/wp/moma_learning/wp-content/uploads/2015/01/Van-Gogh-Terrace-of-a-Cafe-at-Night.jpg" width="300" height="200">
+  		<div class="desc">Art</div>
+	</div>	
+	<div class="img">
+    	<img src="http://weknowyourdreamz.com/images/minions/minions-08.jpg" width="300" height="200">
+  		<div class="desc">Mad Science</div>
+	</div>	
+</div>
 
   				<br/>
 
@@ -292,19 +346,22 @@
            				<td><input type="checkbox" ng-model="user.game[g]">{{g}}</td> 
         		 	</tr>
   				</table>
-			</div>
+			
 			<br/>
 			<div class= "row">
-					<div class="col-md-6">
-						<button ng-click="togglesBackinterestDetails()" class="btn btn-default center-block btn-width">Previous</button>
+					<div class="col-md-4">
+						<button ng-click="togglesBackinterestDetails()" class="btn btn-default center-block btn-width btn-block btn-lg">Previous</button>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-4" style="float: right;">
 						<button ng-click="register(user)" ng-disabled="form.username.$invalid || form.email.$invalid
 			|| form.password.$error.required || form.password.$error.validpassword || form.confirmpassword.$error.required || form.confirmpassword.$error.errorCompareTo || form.confirmemail.$error.required || 
-			form.confirmemail.$error.errorCompareTo"  class="btn btn-success center-block btn-width">Submit</button>
+			form.confirmemail.$error.errorCompareTo"  class="btn btn-success center-block btn-width btn-block btn-lg">Submit</button>
 					</div>
-				</div>
-		</div>	
+			</div>
+	</div>
+</div>	
+
+
 
 	</form>	
 
