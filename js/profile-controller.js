@@ -39,20 +39,38 @@ madscienceapp.controller('profileController', function($scope, $location) {
       }
     };
 
+    $scope.success = false;
+    $scope.savePersonalDetails = function()
+    {
+      $scope.success = true;
+    }
+
+    $scope.saveAvatar = function() 
+    {
+      $scope.success1 = true;
+    }
+    $scope.savePassword = function()
+    {
+      $scope.success2  = true;
+    }
+
     $scope.today();
 
-    $scope.user = {
-     //  userName: 'deryl',
-     //  email: 'deryl1234@gmail.com',
-     //  confirmemail: 'deryl1234@gmail.com',
-     //  userPassword: '12345678',
-     //  userConfirmPassword: '12345678',
-     //  birthday: $scope.dt,
-    	// interest: {'Biology' : true,'Computer Science' : true},
-    	// game: [],
-     //  emailSetting: 'single',
-     //  nationality: 'India',
-     //  country: 'China',
+    $scope.registeruser = {
+      avatar: 'Deryl Rodrigues',
+      userName: 'deryl',
+      type: 'Professor',
+      email: 'deryl1234@gmail.com',
+      phone: '617-818-0000',
+      confirmemail: 'deryl1234@gmail.com',
+      userPassword: '12345678',
+      userConfirmPassword: '12345678',
+      birthday: $scope.dt,
+    	interest: 'Biology, Computer Science',
+    	game: [],
+      emailSetting: 'single',
+      nationality: 'India',
+      country: 'China',
   
       gender: 'male',
 

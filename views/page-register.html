@@ -27,11 +27,15 @@
        
 					</div>
 
-					<div class="col-md-6">
-						<span><input type="radio" ng-model="user.gender" value="male"/>Male</span>
-      					<span><input type="radio" ng-model="user.gender" value="female"/>Female</span>
-      					<span><input type="radio" ng-model="user.gender" value="other"/>Other</span>
-					</div>
+					<div class="form-group">
+        				<div class="col-md-6">
+            				<div class="btn-group">
+        						<label class="btn btn-primary" ng-model="user.gender" uib-btn-radio="'Male'">Male</label>
+        						<label class="btn btn-primary" ng-model="user.gender" uib-btn-radio="'Female'">Female</label>
+       							 <label class="btn btn-primary" ng-model="user.gender" uib-btn-radio="'Other'">Other</label>
+   						    </div>
+       				     </div>
+    				</div>
 				</div>		
 
 				<br/>
@@ -53,13 +57,13 @@
 							<span style="color:#d9534f" ng-show="form.password.$error.validpassword">Password is not valid.</span>
 						</span>	
 					</div>
-					<div class="col-md-6">
-						<p class="input-group">
+					<div class="col-md-4 input-group">
+						<!-- <p class="input-group"> -->
           					<input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
          					 <span class="input-group-btn">
             					<button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
           					</span>
-        				</p>
+        				<!-- </p> -->
 					</div>	
 				</div>	
 				

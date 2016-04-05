@@ -1,4 +1,4 @@
-<div class="row page-margin" style="background-color: grey">
+<div class="row page-margin" style="background-color: white">
 <div class = "col-md-3">  
     <div class="portlet light profile-sidebar-portlet">
                 <!-- SIDEBAR USERPIC -->
@@ -7,8 +7,8 @@
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
-                    <div class="profile-usertitle-name"> Casper Harteveld </div>
-                    <div class="profile-usertitle-job"> Professor </div>
+                    <div class="profile-usertitle-name"> {{registeruser.avatar}} </div>
+                    <div class="profile-usertitle-job"> {{registeruser.type}} </div>
                 </div>
                 <!-- END SIDEBAR USER TITLE -->
                 <!-- SIDEBAR BUTTONS -->
@@ -44,50 +44,49 @@
                 <div class="tab-content">
                     <!-- PERSONAL INFO TAB -->
                     <div  ng-show="tab1">
-                        <form role="form" action="#">
+                        <form role="form" name="form1" >
+                            
                             <div class="form-group">
                                 <label class="control-label">Username</label>
-                                <input type="text" placeholder="CasperHarteveld" class="form-control" /> 
-                            </div>
-                            <div class="form-group">
-                                <input type="checkbox" class="make-switch row" checked data-on-text="&nbsp;Male&nbsp;" data-off-text="&nbsp;Female&nbsp;" data-on-color="success" data-off-color="warning">
-                            </div>
-                           <!--  <div class="form-group">
-                                <label class="control-label">Birthday</label>
-                                <div ng-controller="DatepickerDemoCtrl" class="row"> 
-                                    <div class="col-md-6">
-                                        <p class="input-group">
-                                            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true"
-                                            close-text="Close" />
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-default" ng-click="open($event)">
-                                                    <i class="glyphicon glyphicon-calendar"></i>
-                                                </button>
-                                            </span>
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div> -->
+                                <input type="text" name="username" ng-model="registeruser.userName" required class="form-control" /> 
+                                <span style="color: #d9534f;" ng-show="form1.username.$touched && form1.username.$invalid">	<span ng-show="form1.username.$error.required">Username is required.</span>
+								</span>
+							</div>	
+                            
+                
                             <div class="form-group">
                                 <label class="control-label">E-mail</label>
-                                <input type="e-mail" placeholder="c.harteveld@neu.edu" class="form-control" /> </div>          
+                                <input type="email" ng-model="registeruser.email" name="email" required class="form-control" />
+                                <span style="color: #d9534f;" ng-show="form1.email.$touched && form1.email.$invalid">	<span ng-show="form1.email.$error.required">Email is required.</span>
+                                <span ng-show="form1.email.$error.email">Invalid email address.</span>
+								</span> 
+                            </div>
+
+
                             <div class="form-group">
                                 <label class="control-label">Mobile Number</label>
-                                <input type="text" placeholder="+1 646 580 (6284)" class="form-control" /> </div>
+                                <input type="text" ng-model="registeruser.phone" name="phone" required class="form-control" /> 
+                                 <span style="color: #d9534f;" ng-show="form1.phone.$touched && form1.phone.$invalid">	<span ng-show="form1.phone.$error.required">Mobile Number is required.</span>
+								</span> 
+                            </div>
                             <div class="form-group">
                                 <label class="control-label">Interests</label>
-                                <input type="text" placeholder="Music, Mad Science" class="form-control" /> </div>
+                                <input type="text" ng-model="registeruser.interest"class="form-control" /> </div>
                             <div class="margiv-top-10">
-                                <a href="#" class="btn green-haze"> Save Changes </a>
-                                <a href="#" class="btn default"> Cancel </a>
+                                <button class="btn green-haze" ng-click="savePersonalDetails()" ng-disabled="form1.username.$invalid || form1.email.$invalid
+			|| form1.phone.$error.$invalid"> Save Changes </button>
+                                <a href="#/" class="btn default"> Cancel </a>
                             </div>
+
+                            <br>
+                            <div class="btn-success col-md-4" ng-show="success"> Successfully saved changes </div> 
+
                         </form>
                     </div>
                     <!-- END PERSONAL INFO TAB -->
                     <!-- CHANGE AVATAR TAB -->
                     <div  ng-show="tab2">
-                        <form action="#"
+                        <form 
                         role="form">
                             <div class="form-group">
                                 <div class="fileinput fileinput-new" data-provides="fileinput">
@@ -108,28 +107,60 @@
                                 </div>
                             </div>
                             <div class="margin-top-10">
-                                <a href="#" class="btn green-haze"> Save Changes </a>
-                                <a href="#" class="btn default"> Cancel </a>
+                                <a ng-click="saveAvatar()" class="btn green-haze"> Save Changes </a>
+                                <a href="#/" class="btn default"> Cancel </a>
                             </div>
+
+                            <br>
+                            <div class="btn-success col-md-4" ng-show="success1"> Successfully saved avatar </div> 
+
                         </form>
                     </div>
                     <!-- END CHANGE AVATAR TAB -->
                     <!-- CHANGE PASSWORD TAB -->
                     <div  ng-show="tab3">
-                        <form action="#">
+                        <form name="form">
                             <div class="form-group">
                                 <label class="control-label">Current Password</label>
-                                <input type="password" class="form-control" /> </div>
+                                <input type="password" ng-model="registeruser.userPassword" required password-directive name="password" class="form-control" /> 
+                                <span ng-show="form.password.$touched">
+									<span style="color:#d9534f" ng-show="form.password.$error.required">Password is required.</span>
+								</span>
+								<span ng-hide="form.password.$error.required">
+									<span style="color:#d9534f" ng-show="form.password.$error.validpassword">Password is not valid.</span>
+								</span>	
+                            </div>
+
                             <div class="form-group">
                                 <label class="control-label">New Password</label>
-                                <input type="password" class="form-control" /> </div>
+                                <input type="password" required name="newpassword" ng-model="registeruser.userNewPassword" password-directive class="form-control" /> 
+                                <span ng-show="form.newpassword.$touched">
+									<span style="color:#d9534f" ng-show="form.newpassword.$error.required">Password is required.</span>
+								</span>
+								<span ng-hide="form.newpassword.$error.required">
+									<span style="color:#d9534f" ng-show="form.newpassword.$error.validpassword">Password is not valid.</span>
+								</span>	
+                            </div>
+
                             <div class="form-group">
                                 <label class="control-label">Re-type New Password</label>
-                                <input type="password" class="form-control" /> </div>
+                                <input type="password" required name="retypepassword" compare-to="registeruser.userNewPassword"
+                                ng-model="registeruser.userRetypePassword"  class="form-control" /> 
+                                <span style="color:#d9534f" ng-show="form.retypepassword.$error.required && form.retypepassword.$touched">Please confirm your password.</span>
+	   							<span style="color:#d9534f" ng-show="!form.retypepassword.$error.required && form.retypepassword.$error.errorCompareTo && form.newpassword.$dirty">Passwords do not match.</span>
+                             </div>
+                            
+
                             <div class="margin-top-10">
-                                <a href="#" class="btn green-haze"> Change Password </a>
-                                <a href="#" class="btn default"> Cancel </a>
+                                <button ng-click="savePassword()" ng-disabled="form.password.$error.required || form.password.$error.validpassword 
+                                || form.newpassword.$error.required || form.newpassword.$error.validpassword 
+                                || form.retypepassword.$error.required || form.retypepassword.$error.errorCompareTo"class="btn green-haze"> Change Password </button>
+                                <a href="#/" class="btn default"> Cancel </a>
                             </div>
+
+                            <br>
+                            <div class="btn-success col-md-4" ng-show="success2"> Successfully saved changes </div> 
+
                         </form>
                     </div>
                     <!-- END CHANGE PASSWORD TAB -->

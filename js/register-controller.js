@@ -49,7 +49,7 @@ madscienceapp.controller('registerController', function($scope, $location) {
      //  nationality: 'India',
      //  country: 'China',
   
-      gender: 'male',
+      gender: 'Male',
 
     };
 
