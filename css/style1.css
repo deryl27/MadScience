@@ -1,0 +1,322 @@
+#container {
+    position: relative;
+
+}
+#billboardLabel {
+    position: absolute;
+    top : 150px;
+    left : 400px;
+}
+
+.building {
+    text-align : center;
+}
+
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+}
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button1 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    color: black;
+    text-align: center;
+    /*padding: 30px 50px;*/
+    height : 60px;
+    width : 105px;
+    top: 510px;
+    left : 190px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button2 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 593px;
+    left : 190px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button3 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 676px;
+    left : 190px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button4 {
+    background-color: blue; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 395px;
+    left : 380px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button5 {
+    background-color: blue; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 475px;
+    left : 380px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+
+.button6 {
+    background-color: blue; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 558px;
+    left : 380px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button7 {
+    background-color: blue; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 639px;
+    left : 380px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button8 {
+    background-color: brown; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 358px;
+    left : 550px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button9 {
+    background-color: brown; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 438px;
+    left : 550px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button10 {
+    background-color: brown; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 515px;
+    left : 550px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button11 {
+    background-color: brown; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 595px;
+    left : 550px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button12 {
+    background-color: brown; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 673px;
+    left : 550px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button13 {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 450px;
+    left : 800px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button14 {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 523px;
+    left : 800px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+
+.button15 {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 596px;
+    left : 800px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.button16 {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 105px;
+    top: 669px;
+    left : 800px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.buttonLeft {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 50px;
+    top: 395px;
+    left : 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.buttonRight {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    position: absolute;
+    height : 60px;
+    width : 50px;
+    top: 395px;
+    left : 1000px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px
+}
+.background {
+
+    width : 100%;
+    height :100%;
+}
+
+h3 {
+    text-align: center;
+}
+
+.billboard {
+    text-align : center;
+    position: relative;
+    top : 0px;
+}
+
+#front-buildings {
+    position: relative;
+    bottom: 15px;
+}

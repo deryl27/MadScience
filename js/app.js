@@ -65,6 +65,10 @@ madscienceapp.config(function($routeProvider) {
         .when('/experiments', {
             templateUrl: 'views/experiment.html',
             controller: 'ExperimentController'
+        })
+        .when('/madworld', {
+          templateUrl: 'views/madScienceHome.view.html',
+            controller: 'madScienceController'
         });
 });
 
