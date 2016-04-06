@@ -236,13 +236,24 @@ ul .dropdown-menu li a{
 }
 
 
-        
- #topContainer {
-         background-image:url("../images/background.png");
+ .background-homePage {
+  background-image: url("../images/background.png");
+  height:100%;
+  width: 100%;
+  background-size: cover;
+ }
+.background-madWorldPage {
+  background-image: url("../images/madScienceBackground.png");
+  /*max-height:100%;
+  max-width: 100%;*/
+  /*background-size: cover;*/
+ }
+ /*#topContainer {
+ 
          height:100%;
          width:100%;
          background-size:cover;
-         }
+  }*/
             
  #topRow {
          /*margin-top:100px;*/
