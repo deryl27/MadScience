@@ -72,6 +72,15 @@ html         { overflow-y:hidden; }
     width:100%; 
     height: calc(100% - 50px);
 }
+.tooltip.customClass .tooltip-inner {
+          font-style: bold;
+          border-radius: 5px;
+          font-size: 14px;
+          color: #FAFAFA;
+          background-color: #5CB85C; 
+          box-shadow: 0 6px 12px rgba(0,0,0,.175);
+          max-width:100%;
+        }
 
 .page-margin {
     margin-top: 50px;
@@ -293,13 +302,24 @@ ul .dropdown-menu li a{
 }
 
 
-        
- #topContainer {
-         background-image:url("../images/background.png");
+ .background-homePage {
+  background-image: url("../images/background.png");
+  height:100%;
+  width: 100%;
+  background-size: cover;
+ }
+.background-madWorldPage {
+  background-image: url("../images/madScienceBackground.png");
+  /*max-height:100%;
+  max-width: 100%;*/
+  /*background-size: cover;*/
+ }
+ /*#topContainer {
+ 
          height:100%;
          width:100%;
          background-size:cover;
-         }
+  }*/
             
  #topRow {
          /*margin-top:100px;*/

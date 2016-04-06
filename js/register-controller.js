@@ -1,4 +1,4 @@
-madscienceapp.controller('registerController', function($scope, $location) {
+madscienceapp.controller('registerController', function($scope, $location,$sce) {
     $scope.pageClass = 'page-register';
 
     $scope.personalDetails = true;
@@ -7,27 +7,26 @@ madscienceapp.controller('registerController', function($scope, $location) {
 
     $scope.roles = [
     {
-      url: 'http://placekitten.com/201/201',
-      name: 'Biology'
+      url: 'images/nature.jpeg',
+      name: 'Nature'
     },
     {
-      url: 'http://placekitten.com/201/202',
-      name: 'Computer Science'
-    },
-    {
-      url: 'http://placekitten.com/201/203',
-      name: 'Physics'
-    },
-    {
-      url: 'http://placekitten.com/201/202',
+      url: 'images/pyschology.jpg',
       name: 'Psychology'
     },
     {
-      url: 'http://placekitten.com/201/203',
+      url: '../images/sports.jpg',
       name: 'Sports'
+    },
+    {
+      url: '../images/art.jpg',
+      name: 'Art'
+    },
+    {
+      url: '../images/madscience.jpg',
+      name: 'Mad Science'
     }];
-
-
+    
     $scope.gameplayed = ['Not very often','Often'];
     $scope.games = ['Board Games', 'Card Games', 'Platformers', 'Shooters'];
 

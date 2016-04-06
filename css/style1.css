@@ -1,5 +1,6 @@
 .container {
     position: relative;
+    /*background-image: url("/images/madScienceBackground.png");*/
 
 }
 #billboardLabel {
@@ -42,19 +43,20 @@
    font-family: Georgia, serif;
    text-decoration: none;
    vertical-align: middle;
-   }
+}
+
 .button1 {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    position: absolute;
-    color: black;
+    position: relative;
+    color: white;
     text-align: center;
     /*padding: 30px 50px;*/
     height : 60px;
     width : 105px;
-    top: 510px;
-    left : 190px;
+    top: 1px;
+    left : 1px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -279,7 +281,7 @@
     position: absolute;
     height : 60px;
     width : 50px;
-    top: 395px;
+    top: 170px;
     left : 80px;
     text-align: center;
     text-decoration: none;
@@ -293,7 +295,7 @@
     position: absolute;
     height : 60px;
     width : 50px;
-    top: 395px;
+    top: 170px;
     left : 1000px;
     text-align: center;
     text-decoration: none;
@@ -313,10 +315,10 @@ h3 {
 .billboard {
     text-align : center;
     position: relative;
-    top : 0px;
 }
 
 #front-buildings {
-    position: relative;
-    bottom: 15px;
+    position: absolute;
+    top: 280px;
+    left: 150px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MadScienceApp">
 <head>
 
     <!-- CSS -->
@@ -29,43 +29,15 @@
 </head>
 
 <!-- apply our angular app -->
-<body ng-app="MadScienceApp">
+<body ng-controller="MadScienceController" ng-class="viewBackground">
 
 
-<div ng-controller="MadScienceController">
- 
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#/">Mad Science</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li class="dropdown"><a  data-toggle="dropdown">Administration<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/mad#/about">About Mad Science</a></li>
-            <li><a href="#">Developer Blog</a></li>
-            <li><a href="#">Publications</a></li>
-            <li><a href="#">Credit</a></li>
-          </ul>
-        </li>
-        <li class="dropdown"><a  data-toggle="dropdown">Help Desk<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Page 1-1</a></li>
-            <li><a href="#">Page 1-2</a><a></li>
-            <li><a href="#">Page 1-3</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li ng-hide="currentUser"><a href="/mad#/register"> <span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li ng-hide="currentUser"><a ng-click="toggleModal()"> <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        <li ng-show="currentUser"><a><span class="glyphicon glyphicon-user"></span>{{currentUser}}</a></li>
-        <li ng-show="currentUser"><a href="/mad#/edit"><span><b>EDIT PROFILE</b></span></a></li>
-      </ul>
-    </div>
-  </nav>
 
-   <modal title="Login form" visible="showModal">
+
+ <div ng-include = "'views/header.view.html'"></div>
+  
+  <!-- Modal Code.--> 
+  <modal title="Login form" visible="showModal">
       <form role="form">
         <div class="form-group">
           <label for="email">Email address</label>
@@ -79,15 +51,8 @@
         <button type="submit" ng-click="submitLogin(person)" class="btn btn-default">Submit</button>
       </form>
   </modal>
-</div>
 
-<div id="main">
-    <!-- inject our views using ng-view -->
-    <!-- each angular controller applies a different class here -->
-  
-    <div class="page"  ng-view></div>
-
-</div>        
+  <div ng-view></div>      
         
 </body>
 </html>
