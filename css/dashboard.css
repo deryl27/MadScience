@@ -7,7 +7,7 @@
 /*
  * Global add-ons
  */
- body {
+ #madWorldContainer {
      background-image: url("/images/madScienceBackground.png");
  }
 

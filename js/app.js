@@ -1,9 +1,13 @@
 var madscienceapp = angular.module('MadScienceApp' , ['ngRoute' , 'ngAnimate', 'ui.bootstrap', 'LocalStorageModule']);
 
+madscienceapp.run(function($rootScope) {
+    $rootScope.currentUser = '';
+})
+
 var dummyemail = 'mad@gmail.com';
 var dummypassword = 'a_123456';
 
-madscienceapp.controller('MadScienceController', ['$scope', 'localStorageService', '$location', function($scope, localStorageService, $location)
+madscienceapp.controller('MadScienceController', ['$scope', 'localStorageService', '$location', '$rootScope', function($scope, localStorageService, $location, $rootScope)
 {
   $scope.showModal = false;
   $scope.errormsg = false;
@@ -34,7 +38,8 @@ madscienceapp.controller('MadScienceController', ['$scope', 'localStorageService
         $scope.errormsg = false;
         $scope.showModal = false;
         $scope.currentUser = currentEmail;
-        $location.path('');
+        $rootScope.currentUser = currentEmail;
+        // $location.path('');
       }
       else {
         console.log('Error Message');
