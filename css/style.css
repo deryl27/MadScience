@@ -15,6 +15,15 @@ html         { overflow-y:hidden; }
     width:100%; 
     height: calc(100% - 50px);
 }
+.tooltip.customClass .tooltip-inner {
+          font-style: bold;
+          border-radius: 5px;
+          font-size: 14px;
+          color: #FAFAFA;
+          background-color: #5CB85C; 
+          box-shadow: 0 6px 12px rgba(0,0,0,.175);
+          max-width:100%;
+        }
 
 .page-margin {
     margin-top: 50px;
