@@ -1,4 +1,6 @@
-madscienceapp.controller('profileController', function($scope, $location) {
+madscienceapp.controller('profileController', function($rootScope, $scope, $location) {
+
+    $rootScope.viewBackground = "background-profilePage";
     $scope.pageClass = 'page-profile';
 
    

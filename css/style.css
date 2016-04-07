@@ -301,8 +301,30 @@ ul .dropdown-menu li a{
 
 }
 
+#myNavbar > .navbar-nav {
+    width: 100%;
+    text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
 
- .background-homePage {
+
+
+.background-signUpPage {
+  background-color: white;
+}
+
+.background-experimentPage {
+  background-color: white; 
+}
+
+.background-profilePage {
+  background-color: white;  
+}
+
+.background-homePage {
   background-image: url("../images/background.png");
   height:100%;
   width: 100%;
