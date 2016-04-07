@@ -38,20 +38,20 @@ madscienceapp.controller('registerController', function($rootScope, $scope, $loc
   $scope.today();
 
     $scope.user = {
-      userName: 'deryl',
-      email: 'deryl1234@gmail.com',
-      confirmemail: 'deryl1234@gmail.com',
-      userPassword: '12345678',
-      userConfirmPassword: '12345678',
-      birthday: $scope.dt,
-    	interest: {'Biology' : true,'Computer Science' : true},
-    	game: [],
-      emailSetting: 'single',
-      nationality: 'India',
-      country: 'China',
+     //  userName: 'deryl',
+     //  email: 'deryl1234@gmail.com',
+     //  confirmemail: 'deryl1234@gmail.com',
+     //  userPassword: '12345678',
+     //  userConfirmPassword: '12345678',
+     //  birthday: $scope.dt,
+    	// interest: {'Biology' : true,'Computer Science' : true},
+    	// game: [],
+     //  emailSetting: 'single',
+     //  nationality: 'India',
+     //  country: 'China',
   
       gender: 'Male',
-
+ 
     };
 
     $scope.countries =[
