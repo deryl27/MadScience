@@ -1,9 +1,9 @@
-madscienceapp.controller('profileController', function($scope, $location) {
+madscienceapp.controller('profileController', function($rootScope, $scope, $location) {
+
+    $rootScope.viewBackground = "background-profilePage";
     $scope.pageClass = 'page-profile';
 
-    $scope.personalDetails = true;
-    $scope.demographicDetails = false;
-    $scope.interestDetails = false;
+   
 
     $scope.roles = ['Biology','Computer Science', 'Physics', 'Psychology', 'Sports'];
     $scope.gameplayed = ['Not very often','Often'];
@@ -76,42 +76,8 @@ madscienceapp.controller('profileController', function($scope, $location) {
 
     };
 
-    $scope.countries = ["USA", "UK", "India", "China"];
-
-    $scope.togglePersonalDetails = function (){
-    	$scope.personalDetails = false;
-      $scope.interestDetails = false;
-      $scope.demographicDetails = true;
-    };
-
-     $scope.toggleDemographicDetails = function (){
-    	$scope.demographicDetails = false;
-    	$scope.personalDetails = false;
-      $scope.interestDetails = true;
-    	
-    };
-
-    $scope.toggleBackDemographicDetails = function (){
-      $scope.demographicDetails = false;
-      $scope.personalDetails = true;
-      $scope.interestDetails = false;
-    };
-
-    $scope.togglesBackinterestDetails = function (){
-      $scope.personalDetails = false;
-    	$scope.demographicDetails = true;
-      $scope.interestDetails = false;
-    };
-
-    $scope.register = function(user) {
-    	console.log("user >>>>>>>>" , user);
-      //localStorageService.set('Credentials', user.userName+":"+user.userPassword);
-    	$location.path('')
-    };
-
     
 
- 
 
   $scope.clear = function() {
     $scope.dt = null;

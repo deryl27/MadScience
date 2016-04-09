@@ -1,13 +1,14 @@
-madscienceapp.controller('ExperimentController', function($scope, $location, $anchorScroll) {
+madscienceapp.controller('ExperimentController', function($scope, $location, $anchorScroll, $rootScope) {
     $scope.pageClass = 'page-experiment';
 
     $scope.isReply = true;
     $scope.showCommentError = false;
     $scope.showCommentMainError = false;
 
-   
+    console.log('$scope.currentUser' , $scope.currentUser);
 
-    
+    console.log('rootscope' , $rootScope.currentUser);
+
       var json = {
         "comments" : [
         { 
@@ -15,12 +16,14 @@ madscienceapp.controller('ExperimentController', function($scope, $location, $an
           "name":"John", 
           "datetime":"Sat Apr 02 2016 14:27:09 GMT-0400", 
           "comment" : "Hello How is Life ",
+          "image": 'images/team3.jpg',
           "replies" :
           [ 
             {
               "name" : "Deryl",
               "datetime":"Sat Apr 02 2016 14:27:09 GMT-0400",
-              "comment" : "Hey how are you"
+              "comment" : "Hey how are you",
+              "image": 'images/team1.jpg',
             },
 
             {
@@ -37,12 +40,14 @@ madscienceapp.controller('ExperimentController', function($scope, $location, $an
           "name":"Anna", 
           "datetime":"Sat Apr 02 2016 14:27:09 GMT-0400", 
           "comment" : "Hello How is Life ",
+          "image": 'images/team4.jpg',
           "replies" :
           [ 
             {
-              "name" : "Rod",
+              "name" : "Deryl",
               "datetime":"Sat Apr 02 2016 14:27:09 GMT-0400",
-              "comment" : "Hey how are you"
+              "comment" : "Hey how are you",
+              "image": 'images/team1.jpg',
             },
 
             {
@@ -74,22 +79,20 @@ madscienceapp.controller('ExperimentController', function($scope, $location, $an
                   + currentdate.getMinutes() + ":" 
 
         angular.forEach($scope.commentData.comments, function(item){
-                     // console.log(item.id); 
+                    console.log(item.id + " adasdasdasd   " + comment); 
+
                      if(item.id === comment)
                      {
-                       // console.log("item.replies" , item.replies);
                        item.replies.push({"name" : "Test" , "datetime" : datetime, "comment" : commentArea});
-
-                       // console.log("item.replies" , item.replies);
                      } 
                });
 
       }
       else {
+
         $scope.showCommentError = true;
+        console.log("Show Comment Error" , $scope.showCommentError);
       }
-
-
 
     }
 

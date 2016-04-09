@@ -1,103 +1,176 @@
-<b> Experiment Name <b>
-
-
-
-  <div class="container-fluid">
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a ng-click="scrollTo('section1')">Experiment</a></li>
-          <li><a ng-click="scrollTo('section2')">Description</a></li>
-          <li><a ng-click="scrollTo('section3')">Stats</a></li>
-          <li><a ng-click="scrollTo('section4')">Comments</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
- 
-
- <div id="section1" class="container-fluid">
-  <h2>Experiment</h2>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+<div class="page-container">
+  <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                    <!-- BEGIN CONTENT HEADER -->
+                    <div class="row about-header">
+                        <div class="col-md-12">
+                            <h3 class="experiment-name">Experiment Name</h3>
+                            <p style="font-color:white;">Life is either a great adventure or nothing</p>
+                            <p>Created by: NickZN
+                            <br>Date: 2016.01
+                            <br>Lab: PLAY IT</p>
+                            
+                        </div>
+                    </div>
+                    <div class="row container-fluid">
+                     
+                        <div id="myNavbar">
+                          <ul class="nav navbar-nav" >
+                            <li><a ng-click="scrollTo('section1')">Experiment</a></li>
+                            <li><a ng-click="scrollTo('section2')">Description</a></li>
+                            <li><a ng-click="scrollTo('section3')">Stats</a></li>
+                            <li><a ng-click="scrollTo('section4')">Comments</a></li>
+                          </ul>
+                         
+                        </div>
+                      
+                    </div>
+                    <!-- END CONTENT HEADER -->
+                    <div id="section1" class="row col-lg-8 margin-bottom-40" style="margin-top:20px; margin-left:100px;">
+                           <!--  <iframe src="http://player.vimeo.com/video/22439234" style="margin-left:200px; width:100%; height:500px;border:0" allowfullscreen> </iframe> -->
+                           <iframe src="http://www.northeastern.edu/madscience/Law_WebGL/index.html" width="960" height="600" align="middle" scrolling="no"></iframe>
+                          <!--  <object id="UnityObject" classid="clsid:444785F1-DE89-4295-863A-D46C3A781394"
+                            width="420" height="750"
+                            codebase="http://webplayer.unity3d.com/download_webplayer/UnityWebPlayer.cab#version=2,0,0,0">
+                             <param name="unity3d" value="WebPlayer.unity3d" />
+                             <embed id="UnityEmbed" src="mlpbeta/mlpbeta.unity3d" width="420" height="750"
+                              type="application/vnd.unity" pluginspage="http://www.unity3d.com/unity-web-player-2.x" />
+                            </object> -->
+                    </div>
+                    <!-- BEGIN TEXT & VIDEO -->
+                    <div class="row" >
+                        <div class="col-lg-10" style="margin-left:100px;">
+                            <div class="portlet light about-text">
+                                <h4>
+                                    <i  id="section2" class="fa fa-check icon-warning"></i> Description</h4>
+                                <p  class="margin-top-20"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+                                    lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto
+                                    odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+  <!-- END CONTENT -->
 </div>
 
-
-<div id="section2" class="container-fluid">
-  <h2>Description</h2>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-
-
-<div id="section3" class="container-fluid">
-  <h2>Stats</h2>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-
-
-<div id="section4" class="container-fluid">
-  <h2>Comments</h2>
-  
-    <div ng-repeat="c in commentData.comments">
-       <div class = "row">
-       		<span class="commentName">{{c.name}} </span> 
-       		{{c.datetime | date:'yyyy-MM-dd'}}
-       </div>
-       <div>
-       		{{c.comment}}
-       </div>
-       <br/>
-       <br/>
-
-       <div class ="commentsmargin" ng-repeat = "r in c.replies">
-        	<div class = "row">
-       			<span class="commentName">{{r.name}} </span> 
-       			{{r.datetime}}
-       		</div>
-        <div>
-        	{{r.comment}}
-        </div>
-       
-       <br/>
-
-       </div>
-
-       <div class="commentsmargin">
-       	 	<a ng-show="isReply" ng-click="isReply = !isReply">Reply</a>
-       	 		<div ng-hide="isReply">
-       	 			<div class="row">
-       	 				<textarea rows="4" cols="100" ng-model="commentArea"></textarea>
-       	 			</div>
-       	 			<div class="row">
-       	 				<span style="color:red" ng-show="showCommentError">"Invalid Comment"</span>
-       	 			</div>
-       	 			<div class="row">
-       	 				<button class="col-md-1" ng-click="commentSend(c.id , commentArea); commentArea =''">Comment</button>
-       	 				<a class="col-md-1" ng-click="isReply = !isReply">Cancel</a>
-       	 			</div>	
-       	 		</div>	
-       </div>
-
-       <br/>
-       <br/>
-
-
-    </div>
-
-    
+<div id="section4" class="page-content-wrapper">
+  <!-- BEGIN CONTENT BODY -->
+  <div class="page-content">
     <div class="row">
-       	<textarea rows="4" cols="100" ng-model="commentMainArea"></textarea>
-    </div>
-       	 	
-    <div class="row">
-       	<span style="color:red" ng-show="showCommentMainError">"Invalid Comment"</span>
-    </div>
-    <div class="row">
-       	<button class="col-md-1" ng-click="commentMainSend(commentMainArea)">Comment</button>
-    </div>	
-       	 
-   
+        <div class="col-md-10" style="margin-left:100px;">
+          <!-- BEGIN TODO CONTENT -->
+          <div class="todo-content">
+            <div class="portlet light ">
+              <!-- PROJECT HEAD -->
+              <div class="portlet-title">
+                <div class="caption">
+                  <span class="caption-subject font-green-sharp bold uppercase">Comments</span>
+                </div>
+              </div>
+              <!-- end PROJECT HEAD -->
+            <div class="portlet-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-8">
+                                                    
+                  <div class="tabbable-line">
+                    <div class="tab-content">
+                      <div class="tab-pane active" id="tab_1">
+                        <!-- TASK COMMENTS -->
+                        <div class="form-group">
+                          <div class="col-md-12">
+                            <div class="media-list" ng-repeat="c in commentData.comments">
+                              <div class="media">
+                                
+                               
+                                <div class="media-body todo-comment">
+                                                                                        
+                                  <div class="todo-comment-head">
+                                     <img class="todo-userpic" ng-src="{{c.image}}" width="27px" height="27px">
+                                    <span class="todo-comment-username">{{c.name}}</span> &nbsp;
+                                    <span class="todo-comment-date">{{c.datetime}}</span>
+                                                                                            
+                                  </div>
+                                  <br/>
+                                  <div class="todo-text-color commentsmargin"> 
+                                    {{c.comment}}
+                                  </div>
 
-</div>
+                                  <!-- Nested media object -->
+                                  <div class="media commentsmargin" ng-repeat = "r in c.replies">
+                                    
+                                   
+                                    <div class="row media-body" >
+                                      <div class="row todo-comment-head">
+                                         <img class="todo-userpic" ng-src="{{r.image}}" width="27px" height="27px"> 
+                                        <span class="todo-comment-username">{{r.name}}</span> &nbsp;
+                                        <span class="todo-comment-date">{{r.datetime}}</span>
+                                      </div>
+                                      <br/>
+                                      <div class="todo-text-color commentsmargin"> 
+                                        {{r.comment}} 
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="commentsmargin">
+                                    <br/>
+                                    <div ng-show="currentUser">
+                                      <a ng-show="isReply" ng-click="isReply = !isReply">Reply</a>
+                                    </div>
+                                    <div  ng-hide="isReply">
+                                      <div class="row">
+                                        <textarea rows="4" cols="70" ng-model="commentArea"></textarea>
+                                      </div>
+                                
+                                        <div class="row" ng-show="showCommentError">
+                                          <span style="color:red">"Invalid Comment"</span>
+                                        </div>
+                                      
+                                      <div class="row">
+                                        <button class="col-md-2" ng-click="commentSend(c.id , commentArea); commentArea =''">Comment</button>
+                                         &nbsp; &nbsp;
+                                         <a class="col-md-1" style="margin-left: 20px;" ng-click="isReply = !isReply">Cancel</a>
+                                      </div>  
+                                    </div>  
+                                  </div>
+                                                                                       <br/>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- END TASK COMMENTS -->
+                                                                    <!-- TASK COMMENT FORM -->
+                                                                    <div ng-show="currentUser" class="form-group">
+                                                                        <div class="col-md-12">
+                                                                            <div class="row">
+                                                                              <textarea rows="4" cols="100" ng-model="commentMainArea"></textarea>
+                                                                            </div>
+          
+                                                                            <div class="row">
+                                                                                <span style="color:red" ng-show="showCommentMainError">"Invalid Comment"</span>
+                                                                            </div>
+                                                                            
+
+                                                                            <button type="button" ng-click="commentMainSend(commentMainArea)" class="pull-right btn btn-sm btn-circle green"> &nbsp; Comment &nbsp; 
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- END TASK COMMENT FORM -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END TODO CONTENT -->
+                            </div>
+                        </div>
+                        <!-- END PAGE CONTENT-->
+                    </div>
+                </div>

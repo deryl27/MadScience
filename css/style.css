@@ -7,6 +7,63 @@ Preview
 /* BASE STYLES
 ============================================================================= */
 html         { overflow-y:hidden; }
+
+.about-header {
+  background-image: url("../images/header.png");
+  background-position: center;
+  text-align: left;
+    border: 0px;
+}
+
+.experiment-name {
+  color: white; 
+  text-align: left;
+}
+
+/* END HEADER */
+
+
+
+/* BEGIN ABOUt AND VIDEO */
+.about-text {
+  height: 250px;
+  padding: 0 !important; }
+  .about-text > h4 {
+    background-color:#CD8E4B;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    padding: 1em 20px;
+    margin: 0; }
+    .about-text > h4 > i {
+      font-size: 24px !important;
+      color: #fff; }
+  .about-text > p {
+    color: #808a94; }
+  .about-text ul,
+  .about-text > p,
+  .about-text .about-quote {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .about-text li {
+    margin-bottom: 0.5em; }
+  .about-text .about-quote > h3 {
+    border-left: 3px solid;
+    border-color: #ccc;
+    padding-left: 1em;
+    font-style: italic;
+    line-height: 1.3em; }
+  .about-text .about-quote > .about-author {
+    text-align: right; }
+
+.about-image {
+  height: 545px; }
+
+.about-links-item {
+  margin-bottom: 2em; }
+
+
+
 .page        { 
     bottom:0; 
     padding-left: 10px;
@@ -250,6 +307,29 @@ ul .dropdown-menu li a{
   width: 100%;
   background-size: cover;
  }
+ 
+#myNavbar > .navbar-nav {
+    width: 100%;
+    text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+
+
+
+.background-signUpPage {
+  background-color: white;
+}
+
+.background-experimentPage {
+  background-color: white; 
+}
+
+.background-profilePage {
+  background-color: white;  
+}
 
 .background-homePage {
   background-image: url("../images/background.png");

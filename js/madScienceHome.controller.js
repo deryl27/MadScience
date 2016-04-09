@@ -2,6 +2,7 @@
  * Created by rahul on 3/3/16.
  */
 
+
 madscienceapp.controller('madScienceController', function($rootScope, $scope, $location, $anchorScroll) {
 
     console.log("In madScienceContoller Controller");
@@ -26,7 +27,6 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
     $rootScope.viewBackground = "background-madWorldPage";    	
 
         $scope.$location = $location;
-
 
         // On Click of any window. Load the billBoard with that experiment Image.
         $scope.displayExperimentData = function(experiment) {

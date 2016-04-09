@@ -1,4 +1,6 @@
-madscienceapp.controller('registerController', function($scope, $location,$sce) {
+madscienceapp.controller('registerController', function($rootScope, $scope, $location,$sce) {
+    
+    $rootScope.viewBackground = "background-signUpPage";
     $scope.pageClass = 'page-register';
 
     $scope.personalDetails = true;
@@ -49,7 +51,7 @@ madscienceapp.controller('registerController', function($scope, $location,$sce) 
      //  country: 'China',
   
       gender: 'Male',
-
+ 
     };
 
     $scope.countries =[
