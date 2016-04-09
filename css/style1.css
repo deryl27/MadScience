@@ -1,7 +1,149 @@
+.sky {
+  overflow: hidden;
+  height: 800px;
+  width: 1300px;
+  -webkit-animation: sky_background 50s ease-out infinite;
+  -moz-animation: sky_background 50s ease-out infinite;
+  -o-animation: sky_background 50s ease-out infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_one {
+  background: url("http://montanaflynn.me/lab/css-clouds/images/cloud_one.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_one 50s linear infinite;
+  -moz-animation: cloud_one 50s linear infinite;
+  -o-animation: cloud_one 50s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_two {
+  background: url("http://montanaflynn.me/lab/css-clouds/images/cloud_two.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_two 75s linear infinite;
+  -moz-animation: cloud_two 75s linear infinite;
+  -o-animation: cloud_two 75s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+.clouds_three {
+  background: url("http://montanaflynn.me/lab/css-clouds/images/cloud_three.png");
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: cloud_three 100s linear infinite;
+  -moz-animation: cloud_three 100s linear infinite;
+  -o-animation: cloud_three 100s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
+}
+
+@-webkit-keyframes sky_background {
+  0% {
+    background: #007fd5;
+    color: #007fd5
+  }
+  50% {
+   background: #007fd5;
+    color: #007fd5
+  }
+  100% {
+     background: #007fd5;
+    color: #007fd5
+  }
+}
+
+
+@-webkit-keyframes cloud_one {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-webkit-keyframes cloud_two {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-webkit-keyframes cloud_three {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-moz-keyframes sky_background {
+  0% {
+    background: #007fd5;
+    color: #007fd5
+  }
+  50% {
+    background: #000;
+    color: #a3d9ff
+  }
+  100% {
+    background: #007fd5;
+    color: #007fd5
+  }
+}
+
+
+@-moz-keyframes cloud_one {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-moz-keyframes cloud_two {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
+
+@-moz-keyframes cloud_three {
+  0% {
+    left: 0
+  }
+  100% {
+    left: -200%
+  }
+}
 #container {
     position: absolute;
     left : 43%;
-    top : 16%;
+    top : 10%;
 }
 
 #container input {
@@ -37,8 +179,9 @@
     /*background: #f1f1f1;  */
     min-height: 11em;
     position: relative;
+    top : -10%;
     left : -20%;
-    width: 100%;
+    width: 115%;
     z-index: 5;
 }
 
@@ -50,28 +193,16 @@
     
 }
 
-#content-1 p {
-    clear: both;
-    margin-bottom: 1em;
-}
-#content-1 p.left img {
-    float: left;
-    margin-right: 1em;
-}
-#content-1 p.last {
-    margin-bottom: 0;
+#content-1  {
+    position: relative;
+    height : 90%;
+    width: 90%  
 }
 
-#content-2 p {
-    float: left;
-    width: 48.5%;
-}
-#content-2 p.column-right {
-    margin-left: 3%;
-}
-#content-2 p img {
-    display: block;
-    margin: 0 auto 1em auto;
+#content-2  {
+    position: relative;
+    height: 90%;
+    width: 90%;
 }
 
 
@@ -417,10 +548,44 @@ h3 {
     margin-left: auto;
 }
 
+
+a.darken {
+    display: inline-block;
+    background: black;
+    padding: 0;
+}
+a.darken img {
+    display: block;
+    
+    -webkit-transition: all 0.5s linear;
+       -moz-transition: all 0.5s linear;
+        -ms-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
+a.darken:hover img {
+    opacity: 0.3;
+            
+}
+.billBoardImages {
+
+    position: absolute;
+    top : 0px;
+    left : 0px;
+    right : 0px;
+    bottom: 0px;
+    height : 150px;
+    width : 290px;
+}
+
 .windows {
     position: relative;
     left : 500px;
     top : 10px;
+}
+
+.billBoardHolder {
+    margin-top: 50px;
 }
 
 /*.experimentTabImage {

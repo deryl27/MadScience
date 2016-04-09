@@ -14,12 +14,12 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
 
     $scope.experimentWindows = [
 	
-		    {billBoardImage : "imageURL1", nameOnWindow : "Exp1"},
-		    {billBoardImage : "imageURL2", nameOnWindow : "Exp2"},
-		    {billBoardImage : "imageURL3", nameOnWindow : "Exp3"},
-		    {billBoardImage : "imageURL4", nameOnWindow : "Exp4"},
-		    {billBoardImage : "imageURL5", nameOnWindow : "Exp5"},
-		    {billBoardImage : "imageURL6", nameOnWindow : "Exp6"}
+		    {billBoardImage : "images/expimgs/exp1.jgg", nameOnWindow : "Exp1"},
+		    {billBoardImage : "images/expimgs/exp2.jpg", nameOnWindow : "Exp2"},
+		    {billBoardImage : "images/expimgs/exp3.jpg", nameOnWindow : "Exp3"},
+		    {billBoardImage : "images/expimgs/exp4.jpg", nameOnWindow : "Exp4"},
+		    {billBoardImage : "images/expimgs/exp5.jpg", nameOnWindow : "Exp5"},
+		    {billBoardImage : "images/expimgs/exp6.jpg", nameOnWindow : "Exp6"}
     ];
 
 

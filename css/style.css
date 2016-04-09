@@ -307,7 +307,7 @@ ul .dropdown-menu li a{
   width: 100%;
   background-size: cover;
  }
- 
+
 #myNavbar > .navbar-nav {
     width: 100%;
     text-align: center;
@@ -341,8 +341,17 @@ ul .dropdown-menu li a{
   /*background-image: url("../images/madScienceBackground.png");*/
   /*max-height:100%;
   max-width: 100%;*/
-  background-color: #87CEFA;
-  background-size: cover;
+  /*background: #007fd5;*/
+  height: 100%;
+  width: 100%;
+  /*position: relative;*/
+  overflow: hidden;
+  -webkit-animation: sky_background 50s ease-out infinite;
+  -moz-animation: sky_background 50s ease-out infinite;
+  -o-animation: sky_background 50s ease-out infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0)
  }
  /*#topContainer {
  
