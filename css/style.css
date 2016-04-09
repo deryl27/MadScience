@@ -244,18 +244,25 @@ ul .dropdown-menu li a{
 
 }
 
+.background-personallabPage {
+  background-color: blue;
+  height:100%;
+  width: 100%;
+  background-size: cover;
+ }
 
- .background-homePage {
+.background-homePage {
   background-image: url("../images/background.png");
   height:100%;
   width: 100%;
   background-size: cover;
  }
 .background-madWorldPage {
-  background-image: url("../images/madScienceBackground.png");
+  /*background-image: url("../images/madScienceBackground.png");*/
   /*max-height:100%;
   max-width: 100%;*/
-  /*background-size: cover;*/
+  background-color: #87CEFA;
+  background-size: cover;
  }
  /*#topContainer {
  
