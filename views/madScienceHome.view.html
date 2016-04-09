@@ -3,14 +3,14 @@
     <div id="container">
 
         <input id="tab-1" type="radio" name="tab-group" checked="checked" ng-model="tabModel" value="Experiment"/>
-        <label for="tab-1">Experiment</label>
+        <label class="tabLabels" for="tab-1">Experiment</label>
         
         <input id="tab-2" type="radio" name="tab-group" ng-model="tabModel" value="Filter"/>
-        <label for="tab-2">Filter</label>
+        <label class="tabLabels" for="tab-2">Filter</label>
         
         <div id="content">
             <div id="content-1">
-               Click On Any Experiment Window to play the Game
+               <label >{{experimentContent}}</label>
             </div>
            
             <div id="content-2">

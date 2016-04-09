@@ -9,7 +9,7 @@
     visibility: hidden;
 }
 
-#container label {
+.tabLabels {
     background: #f9f9f9; 
     border-radius: .25em .25em 0 0;
     color: #888;  
