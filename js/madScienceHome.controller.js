@@ -5,32 +5,34 @@
 madscienceapp.controller('madScienceController', function($rootScope, $scope, $location, $anchorScroll) {
 
     console.log("In madScienceContoller Controller");
-    $scope.clicked = false;
-    $scope.clickedFilter = false;
-    $scope.experimentWindows = [{left : "123px", top : "243px", name : "button1"},
-    {left : "222px", top : "543px", name : "button2"},
-    {left : "13px", top : "23px", name : "button3"},
-    {left : "13px", top : "23px", name : "button4"},
-    {left : "13px", top : "23px", name : "button5"},
-    {left : "13px", top : "23px", name : "button6"}
+    
+    //Experiment Tab should always be open on arriving in Mad World
+    $scope.tabModel = "Experiment";
+
+    $scope.experimentWindows = [
+	
+		    {billBoardImage : "imageURL", nameOnWindow : "Exp1"},
+		    {billBoardImage : "imageURL", nameOnWindow : "Exp2"},
+		    {billBoardImage : "imageURL", nameOnWindow : "Exp3"},
+		    {billBoardImage : "imageURL", nameOnWindow : "Exp4"},
+		    {billBoardImage : "imageURL", nameOnWindow : "Exp5"},
+		    {billBoardImage : "imageURL", nameOnWindow : "Exp6"}
     ];
 
 
     //Set Background
     $rootScope.viewBackground = "background-madWorldPage";    	
 
-
-
         $scope.$location = $location;
 
-        $scope.displayCategories = function() {
-        	$scope.clicked = false;
-        	$scope.clickedFilter = !$scope.clickedFilter;
-        }
 
+        // On Click of any window. Load the billBoard with that experiment Image.
         $scope.displayExperimentData = function(experiment) {
         	console.log("Inside experiment Tab");
-        	$scope.clicked = true;
-        	$scope.clickedFilter = false;
+        	//Go To the Experiment Tab
+        	var openedTab = $scope.tabModel;
+        	if (openedTab === "Filter") {
+        		$scope.tabModel = "Experiment";
+        	}
         }
 });

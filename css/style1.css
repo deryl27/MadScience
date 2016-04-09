@@ -1,7 +1,7 @@
 #container {
     position: absolute;
     left : 43%;
-    top : 20%;
+    top : 18%;
 }
 
 #container input {
@@ -419,6 +419,12 @@ h3 {
     display:block;
     margin-right: auto;
     margin-left: auto;
+}
+
+.windows {
+    position: relative;
+    left : 500px;
+    top : 10px;
 }
 
 /*.experimentTabImage {

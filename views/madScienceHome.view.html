@@ -2,10 +2,10 @@
     <img src="images/billboard.png" class="billBoardImage"/>
     <div id="container">
 
-        <input id="tab-1" type="radio" name="tab-group" checked="checked"/>
+        <input id="tab-1" type="radio" name="tab-group" checked="checked" ng-model="tabModel" value="Experiment"/>
         <label for="tab-1">Experiment</label>
         
-        <input id="tab-2" type="radio" name="tab-group" />
+        <input id="tab-2" type="radio" name="tab-group" ng-model="tabModel" value="Filter"/>
         <label for="tab-2">Filter</label>
         
         <div id="content">
@@ -14,10 +14,17 @@
             </div>
            
             <div id="content-2">
-                Hello 2
+               Have to display filters. 
             </div>
         </div>
     </div>
+
+    <!-- Experiment Windows-->
+    <div class="windows" ng-repeat="experiment in experimentWindows">
+        <button type="button" ng-click="displayExperimentData(experiment)" class="button">{{experiment.nameOnWindow}}
+        </button>
+    </div>
+
 </div>
 <!-- <div id="billBoard">
 
