@@ -308,6 +308,12 @@ ul .dropdown-menu li a{
   background-size: cover;
  }
 
+.heading-title {
+  font-size: 16px;
+  color:  #449d44;
+  /*color:  #5cb85c;*/
+}
+
 #myNavbar > .navbar-nav {
     width: 100%;
     text-align: center;

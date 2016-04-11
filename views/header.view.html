@@ -23,8 +23,32 @@
       <ul class="nav navbar-nav navbar-right">
         <li ng-hide="currentUser"><a href="/mad#/register"> <span class="glyphicon glyphicon-user"></span> Sign Up  </a></li>
         <li ng-hide="currentUser"><a ng-click="toggleModal()"> <span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-        <li ng-show="currentUser"><a><span class="glyphicon glyphicon-user"></span>  {{currentUser}}</a></li>
-        <li ng-show="currentUser"><a href="/mad#/edit"><span><b>EDIT PROFILE</b></span></a></li>
+      <!--   <li ng-show="currentUser"><a><span class="glyphicon glyphicon-user"></span>  {{currentUser}}</a></li>
+        <li ng-show="currentUser"><a href="/mad#/edit"><span><b>EDIT PROFILE</b></span></a></li> -->
+        <!-- BEGIN USER LOGIN DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li ng-show="currentUser" class="dropdown dropdown-user">
+                <a class="dropdown-toggle" dropdown-menu-hover data-toggle="dropdown" data-close-others="true">
+                    <img alt="" class="img-circle" ng-src="../images/avatar3_small.jpg" /> 
+                    <span  style ="marging-left: 15px" class="username username-hide-on-mobile"> Deryl </span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-default">
+                    <li>
+                        <a href="#/profile/main">
+                            <i class="glyphicon glyphicon-tasks"></i> Head Quaters </a>
+                    </li>
+                    <li>
+                        <a href="/mad#/edit">
+                            <i class="icon-user"></i> My Profile   
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-key"></i> Log Out </a>
+                    </li>
+                </ul>
+            </li>
       </ul>
     </div>
   </nav>

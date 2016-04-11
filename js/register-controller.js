@@ -28,6 +28,24 @@ madscienceapp.controller('registerController', function($rootScope, $scope, $loc
       url: '../images/madscience.jpg',
       name: 'Mad Science'
     }];
+
+    $scope.activities = [
+    {
+      url: 'images/board_game.jpg',
+      name: 'Board Game'
+    },
+    {
+      url: 'images/Card_games.jpg',
+      name: 'Card Game'
+    },
+    {
+      url: '../images/platformer.jpg',
+      name: 'Platformer'
+    },
+    {
+      url: '../images/shooter.jpg',
+      name: 'Shooters'
+    }];
     
     $scope.gameplayed = ['Not very often','Often'];
     $scope.games = ['Board Games', 'Card Games', 'Platformers', 'Shooters'];
@@ -51,6 +69,7 @@ madscienceapp.controller('registerController', function($rootScope, $scope, $loc
      //  country: 'China',
   
       gender: 'Male',
+      emailSetting : 'Daily',
  
     };
 
