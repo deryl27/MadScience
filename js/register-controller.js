@@ -1,4 +1,4 @@
-madscienceapp.controller('registerController', function($rootScope, $scope, $location,$sce) {
+madscienceapp.controller('registerController', function($rootScope, $scope, $location) {
     
     $rootScope.viewBackground = "background-signUpPage";
     $scope.pageClass = 'page-register';
