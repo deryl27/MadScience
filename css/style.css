@@ -11,6 +11,7 @@ html         { overflow-y:hidden; }
 .about-header {
   background-image: url("../images/header.png");
   background-position: center;
+  background-size: cover;
   text-align: left;
     border: 0px;
 }
@@ -18,6 +19,13 @@ html         { overflow-y:hidden; }
 .experiment-name {
   color: white; 
   text-align: left;
+}
+
+.exp-image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 /* END HEADER */
@@ -302,10 +310,8 @@ ul .dropdown-menu li a{
 }
 
 .background-personallabPage {
-  background-color: #FCF8E3;
-  height:100%;
-  width: 100%;
-  background-size: cover;
+
+  background-color: white;
  }
 
 .heading-title {

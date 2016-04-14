@@ -1,21 +1,11 @@
-<!--<div class="container-fluid contentContainer" style="margin-top: 50px;"> -->
-<!-- 	<div class="row"> 	 	
-	 	 <div class="col-md-6 col-md-offset-3" id="topRow">
-	 	 	 <h1 class="p" id="welcome">Welcome to the Mad World!!!</h1>	
-	 	 	 <p class="marginTop lead p">A Game for People About People</p>
-		 </div> 	 	
-	</div> -->
-<!-- 	<div ng-click="myValue=true" >LEFT</div>
-    <div  ng-click="myValue=false">RIGHT</div> -->
 
-    <!-- <div class="row"> -->
     	<div class="row">
     		<div class="col-lg-6 col-md-6 col-xl-6">
     			<div class = "image-overlay col-lg-12 col-md-12 col-xl-12" id="hq_img" ng-hide="myValue"
                 ng-init="imgsrc='../images/homepage/hq_off.png'" ng-mouseover="imgsrc='../images/homepage/hq_on.png'" ng-mouseout="imgsrc='../images/homepage/hq_off.png'">
     				<img ng-src="{{imgsrc}}" id="commLabsImage">   
-    				<div class="project-overlay " ng-click="myValue=true">
-    					<img ng-src="images/homepage/headquarters_btn.png" class="homepage_btn">
+    				<div class="project-overlay ">
+    					<img  ng-click="myValue=true" ng-src="images/homepage/headquarters_btn.png" class="homepage_btn">
     				</div>
     			</div> 
     		</div>
@@ -24,38 +14,15 @@
     			<div class = "img-overlay col-lg-12 col-md-12 col-xl-12" id="mw_img" ng-hide="myValue"
                 ng-init="imgsrc2='../images/homepage/mw_off.png'" ng-mouseover="imgsrc2='../images/homepage/mw_on.png'" ng-mouseout="imgsrc2='../images/homepage/mw_off.png'">
     				<img ng-src="{{imgsrc2}}" id="madWorldImage">
-    				<div class="project-overlay " ng-click="myValue=true">
+    				<div class="project-overlay " >
     					<!-- <a href="/mad#/madworld"> -->
-    					<img ng-click="gotoPage()" ng-src="images/homepage/mad_world_btn.png" class="homepage_btn"> 
+    					<img  ng-click="myValue = true; gotoPage()" ng-src="images/homepage/mad_world_btn.png" class="homepage_btn"> 
     					<!-- </a> -->
     				</div>
     			</div> 
      		
      		
     		</div>
-
-   <!--  	<div class="col-md-6" style="background: white;"> 
-     		<img ng-src="images/homepage/mw_off.png" id="md_img">	
-     		<button style="position: absolute; right:20px;">HELLO WORLD</button>
-    	</div> -->
     	</div>
 
-    	
-     
-        <!-- <img ng-src="images/homepage/mw_off.png" id="two" class='animate-hide'  ng-hide="myValue">  -->
-    <!-- </div> -->
-
-		
-<!-- 	<div class="row footer-container">
-		 <a href="#about">
-			 <div style="color: white;" class="col-md-5 marginLeft marginTop  btn btn-info" >
-			 	 <h2><span class="glyphicon glyphicon-user"></span> HEADQUARTERS</h2>
-			 	 <h4> PERSONAL AND VIRTUAL LAB</h4>
-			 </div>
-		 </a>	 	
-		 <div style=" color: white;" class="col-md-5 marginLeft marginTop  btn btn-info" >
-		 	<h2><a href="/mad#/madworld" ><span class="glyphicon glyphicon-search"></span> MAD WORLD!</a></h2>
-		 	 <h4> EXPLORE ALL EXPERIMENTS</h4>
-		 </div>
-	</div> -->
-<!-- </div>
+    

@@ -1,4 +1,8 @@
-<div class="row page-margin" style="background-color: white">
+<br/>
+<br/>
+
+
+<div class="row page-margin" style="background-color: white; margin-top: 100px">
 <div class = "col-md-3">  
     <div class="portlet light profile-sidebar-portlet">
                 <!-- SIDEBAR USERPIC -->
@@ -47,38 +51,47 @@
                         <form role="form" name="form1" >
                             
                             <div class="form-group">
-                                <label class="control-label">Username</label>
+                                <label class="control-label heading-title bold uppercase">Username</label>
+                                <br/>
                                 <input type="text" name="username" ng-model="registeruser.userName" required class="form-control" /> 
                                 <span style="color: #d9534f;" ng-show="form1.username.$touched && form1.username.$invalid">	<span ng-show="form1.username.$error.required">Username is required.</span>
 								</span>
 							</div>	
-                            
+                            <br/>
                 
                             <div class="form-group">
-                                <label class="control-label">E-mail</label>
+                                <label class="control-label heading-title bold uppercase">E-mail</label>
                                 <input type="email" ng-model="registeruser.email" name="email" required class="form-control" />
                                 <span style="color: #d9534f;" ng-show="form1.email.$touched && form1.email.$invalid">	<span ng-show="form1.email.$error.required">Email is required.</span>
                                 <span ng-show="form1.email.$error.email">Invalid email address.</span>
 								</span> 
                             </div>
-
+                            <br/>
 
                             <div class="form-group">
-                                <label class="control-label">Mobile Number</label>
+                                <label class="control-label heading-title bold uppercase">Mobile Number</label>
                                 <input type="text" ng-model="registeruser.phone" name="phone" required class="form-control" /> 
                                  <span style="color: #d9534f;" ng-show="form1.phone.$touched && form1.phone.$invalid">	<span ng-show="form1.phone.$error.required">Mobile Number is required.</span>
 								</span> 
                             </div>
+                            <br/>
+
                             <div class="form-group">
-                                <label class="control-label">Interests</label>
-                                <input type="text" ng-model="registeruser.interest"class="form-control" /> </div>
+                                <label class="control-label heading-title bold uppercase">Interests</label>
+                                <input type="text" ng-model="registeruser.interest"class="form-control" /> 
+                            </div>
+
+                            <br/>
+                            <br/>
+
                             <div class="margiv-top-10">
-                                <button class="btn green-haze" ng-click="savePersonalDetails()" ng-disabled="form1.username.$invalid || form1.email.$invalid
+                                <button class="btn btn-success" ng-click="savePersonalDetails()" ng-disabled="form1.username.$invalid || form1.email.$invalid
 			|| form1.phone.$error.$invalid"> Save Changes </button>
                                 <a href="#/" class="btn default"> Cancel </a>
                             </div>
 
-                            <br>
+                            <br/>
+                            <br/>
                             <div class="btn-success col-md-4" ng-show="success"> Successfully saved changes </div> 
 
                         </form>
@@ -93,6 +106,8 @@
                                     <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
                                         <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
                                     <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
+                                    <br/>
+                                    <br/>
                                     <div>
                                         <span class="btn default btn-file">
                                             <span class="fileinput-new"> Select image </span>
@@ -100,6 +115,8 @@
                                             <input type="file" name="..."> </span>
                                         <a href="#" class="btn default fileinput-exists" data-dismiss="fileinput"> Remove </a>
                                     </div>
+                                    <br/>
+                                    <br/>
                                 </div>
                                 <div class="clearfix margin-top-10">
                                     <span class="label label-danger">NOTE! </span>
@@ -107,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="margin-top-10">
-                                <a ng-click="saveAvatar()" class="btn green-haze"> Save Changes </a>
+                                <a ng-click="saveAvatar()" class="btn btn-success"> Save Changes </a>
                                 <a href="#/" class="btn default"> Cancel </a>
                             </div>
 
@@ -121,7 +138,7 @@
                     <div  ng-show="tab3">
                         <form name="form">
                             <div class="form-group">
-                                <label class="control-label">Current Password</label>
+                                <label class="control-label heading-title bold uppercase">Current Password</label>
                                 <input type="password" ng-model="registeruser.userPassword" required password-directive name="password" class="form-control" /> 
                                 <span ng-show="form.password.$touched">
 									<span style="color:#d9534f" ng-show="form.password.$error.required">Password is required.</span>
@@ -130,9 +147,10 @@
 									<span style="color:#d9534f" ng-show="form.password.$error.validpassword">Password is not valid.</span>
 								</span>	
                             </div>
+                            <br/>
 
                             <div class="form-group">
-                                <label class="control-label">New Password</label>
+                                <label class="control-label heading-title bold uppercase">New Password</label>
                                 <input type="password" required name="newpassword" ng-model="registeruser.userNewPassword" password-directive class="form-control" /> 
                                 <span ng-show="form.newpassword.$touched">
 									<span style="color:#d9534f" ng-show="form.newpassword.$error.required">Password is required.</span>
@@ -142,23 +160,26 @@
 								</span>	
                             </div>
 
+                            <br/>
                             <div class="form-group">
-                                <label class="control-label">Re-type New Password</label>
+                                <label class="control-label heading-title bold uppercase">Re-type New Password</label>
                                 <input type="password" required name="retypepassword" compare-to="registeruser.userNewPassword"
                                 ng-model="registeruser.userRetypePassword"  class="form-control" /> 
                                 <span style="color:#d9534f" ng-show="form.retypepassword.$error.required && form.retypepassword.$touched">Please confirm your password.</span>
 	   							<span style="color:#d9534f" ng-show="!form.retypepassword.$error.required && form.retypepassword.$error.errorCompareTo && form.newpassword.$dirty">Passwords do not match.</span>
                              </div>
                             
-
+                            <br/>
+                            <br/>
                             <div class="margin-top-10">
                                 <button ng-click="savePassword()" ng-disabled="form.password.$error.required || form.password.$error.validpassword 
                                 || form.newpassword.$error.required || form.newpassword.$error.validpassword 
-                                || form.retypepassword.$error.required || form.retypepassword.$error.errorCompareTo"class="btn green-haze"> Change Password </button>
+                                || form.retypepassword.$error.required || form.retypepassword.$error.errorCompareTo"class="btn btn-success"> Change Password </button>
                                 <a href="#/" class="btn default"> Cancel </a>
                             </div>
 
-                            <br>
+                            <br/>
+                            <br/>
                             <div class="btn-success col-md-4" ng-show="success2"> Successfully saved changes </div> 
 
                         </form>
