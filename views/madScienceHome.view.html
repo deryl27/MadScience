@@ -1,53 +1,52 @@
-<div class="sky">
-    <div class="clouds_one"></div>
-    <div class="clouds_two"></div>
-    <div class="clouds_three"></div>
-
-
-    <div class="billBoardHolder">
-        <img src="images/billboard.png" class="billBoardImage"/>
-        <div id="container">
-
-            <input id="tab-1" type="radio" name="tab-group" checked="checked" ng-model="tabModel" value="Experiment"/>
-            <label class="tabLabels" for="tab-1">Experiment</label>
-            
-            <input id="tab-2" type="radio" name="tab-group" ng-model="tabModel" value="Filter"/>
-            <label class="tabLabels" for="tab-2">Filter</label>
-            
-            <div id="content">
-                <div id="content-1">
-                    <a href="/mad#/experiments" class="darken">
-                        <img src="{{experimentContent}}" class="billBoardImages">
-                    </a>
-                </div>
-               
-                <div id="content-2">
-                   Have to display filters. 
+<!-- <img src="images/billboard.png" class="billBoardImage center-block"/> -->
+<div id="madWorldContainer" class="container-fluid">  
+   <div class="row">
+        <div class="col-md-4 col-lg-4 col-xl-4"></div>
+        <div class="col-md-4 col-lg-4 col-xl-4 billBoardHolder">
+            <div id="container">   
+                <input id="tab-1" type="radio" name="tab-group" checked="checked" ng-model="tabModel" value="Game"/>
+                <label class="tabLabels" for="tab-1">GAME</label>
+                
+                <input id="tab-2" type="radio" name="tab-group" ng-model="tabModel" value="Filter"/>
+                <label class="tabLabels" for="tab-2">FILTER</label>
+              
+                <div id="content">
+                    <div id="content-1">
+                        <label id="HelloWorldId">Select any category from the filter tab or click on any game window !!.
+                        </label>
+                        <a href="/mad#/experiments" class="darken">      
+                             <img src="{{experimentContent}}" class="billBoardImages"/>
+                        </a>
+                    </div>      
+                    <div id="content-2">
+                       <input type="radio" name="categoryRadio"  value="Cat1" id="cat1" ng-click="displayCat1Buttons()"/>Psychology  &nbsp&nbsp
+                       <input type="radio" name="categoryRadio"  value="Cat2" id="cat2" ng-click="displayCat2Buttons()"/>Sports  &nbsp&nbsp
+                       <input type="radio" name="categoryRadio"  value="Cat3" id="cat3" ng-click="displayCat3Buttons()"/>School  <br/> <br/>
+                       <input type="radio" name="categoryRadio"  value="Cat4" id="cat4" ng-click="displayCat4Buttons()">Law  &nbsp&nbsp
+                       <input type="radio" name="categoryRadio"  value="Cat5" id="cat5" ng-click="displayCat5Buttons()"/>Technology  &nbsp&nbsp
+                       <input type="radio" name="categoryRadio"  value="Cat6" id="cat6" ng-click="displayCat6Buttons()"/>Health  <br/><br/>
+                       <input type="radio" name="categoryRadio"  value="Cat4" id="cat7" ng-click="displayCat7Buttons()"/>Environment  &nbsp&nbsp
+                       <input type="radio" name="categoryRadio"  value="Cat5" id="cat8" ng-click="displayCat8Buttons()"/>Politics  &nbsp&nbsp
+                       <input type="radio" name="categoryRadio"  value="Cat6" id="cat9" ng-click="displayCat9Buttons()"/>Education <br/>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Experiment Windows-->
-        <div class="windows" ng-repeat="experiment in experimentWindows">
-            <button type="button" ng-click="displayExperimentData(experiment)" class="button">{{experiment.nameOnWindow}}
-            </button>
-        </div>
-
+        <div class="col-md-4 col-lg-4 col-xl-4"></div>
     </div>
-</div>
-<!-- <div id="billBoard">
-
+    <div class="row">
+        <div class="col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col-md-8 col-lg-8 col-xl-8">
+            <!-- Drawing buildings here using HTML canvas. -->
+            <div class="front_buildings" id="front_buildings_id">    
+                <div ng-repeat="experiment in experimentWindows" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+                     <button type="button" ng-click="displayExperimentData(experiment)" class="button {{experiment.cssClass}}">{{experiment.expName}}  
+                     </button>
+                </div>
+            </div>
+           <!--  <canvas id="front_buildings_1" width="700" height="400"></canvas> -->
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
   
-   
- <button type="button" class="button billBoardButton"></button>
-   
-   <button type="button" ng-class="{'buttonSelected experimentTabImage' : clicked, 'button experimentTabImage' : !clicked}" ng-click="">Experiment</button>
-
-   <button type="button" ng-class="{'buttonSelected filterTabImage' : clickedFilter, 'button filterTabImage' : !clickedFilter}" ng-click="displayCategories()">Filter</button> 
 </div>
-
-<div id="experimentBuildingWindows">
-     <span ng-repeat="experiment in experimentWindows">
-        <button type="button" ng-click="displayExperimentData(experiment.name)" class="button {{experiment.name}}">{{experiment.name}}</button>
-</span>
-</div> -->
