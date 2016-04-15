@@ -1,3 +1,8 @@
+<br/>
+<br/>
+<br/>
+<br/>
+
 <div>
 	<form  name="form" novalidate>	
 		<div class="row" ng-show="personalDetails">
@@ -8,10 +13,10 @@
 			<div id="register-content">
 				<div class="row">
 					<div class="col-md-6">
-						<label for="user">Username</label>
+						<label for="user" class="heading-title bold uppercase">Username</label>
 					</div>
 					<div class="col-md-6">
-						<label for="gender" >Gender</label>
+						<label for="gender" class="heading-title bold uppercase" >Gender</label>
 					</div>	
 				</div>
 				<div class="row">	
@@ -39,12 +44,14 @@
 				</div>		
 
 				<br/>
+				<br/>
+				
 				<div class="row">
 					<div class="col-md-6">
-						<label for="password">Password</label>
+						<label for="password" class="heading-title bold uppercase">Password</label>
 					</div>
 					<div class="col-md-6">
-						<label for="birthday"> Date Of Birth</label>
+						<label for="birthday" class="heading-title bold uppercase"> Date Of Birth</label>
 					</div>				
 				</div>
 				<div class="row">
@@ -68,10 +75,12 @@
 				</div>	
 				
 				<br/>
+				<br/>
+				
 
 				<div class="row">
 					<div class="col-md-6">
-						<label for="confirmpassword">Confirm Password</label>
+						<label for="confirmpassword" class="heading-title bold uppercase">Confirm Password</label>
 					</div>
 				</div>	
 				<div class="row">	
@@ -83,12 +92,13 @@
 				</div>
 
 				<br/>
+				<br/>
 				<div class="row">
 					<div class="col-md-6">
-						<label for="email">Email</label>
+						<label for="email" class="heading-title bold uppercase">Email</label>
 					</div>
 					<div class="col-md-6">
-						<label for="confirmemail">Confirm Email</label>
+						<label for="confirmemail" class="heading-title bold uppercase">Confirm Email</label>
 					</div>
 				</div>	
 				<div class="row">
@@ -107,19 +117,23 @@
 					</div>		
 				</div> 
 				<br/>
-
+				<br/>
+				
 				<div class="row">
 					<div class="col-md-12">
-					<label for="emailsetting">Email Setting       </label>
-					<span><input type="radio" ng-model="user.emailSetting" value="single"/>Single
-					</span>
-      				<span><input type="radio" ng-model="user.emailSetting" value="daily"/>Daily Digest
-      				</span>
-      				<span><input type="radio" ng-model="user.emailSetting" value="weekly"/>Weekly Digest
-      				</span>
-      				</div>
+					<label for="emailsetting" class="heading-title bold uppercase">Email Setting       </label>
+      					<div class="form-group">
+            					<div class="btn-group">
+        							<label class="btn btn-success" ng-model="user.emailSetting" uib-btn-radio="'Single'">Single</label>
+        							<label class="btn btn-success" ng-model="user.emailSetting" uib-btn-radio="'Daily'">Daily Digest</label>
+       							 	<label class="btn btn-success" ng-model="user.emailSetting" uib-btn-radio="'Weekly'">Weekly</label>
+       				     </div>
+    				</div>
+    				</div>	
 				</div>
 				<br/>
+				<br/>
+		
 				<div class= "row">
 					<div class="col-md-6">
 					</div>
@@ -142,10 +156,10 @@
 			<div id="register-content">
 				<div class="row">
 					<div class="col-md-4">
-						<label for="user">Nationality</label>
+						<label for="user" class="heading-title bold uppercase">Nationality</label>
 					</div>
 					<div class="col-md-4">
-						<label for="gender" >Country of Residence</label>
+						<label for="gender" class="heading-title bold uppercase" >Country of Residence</label>
 					</div>	
 				</div>
 
@@ -165,12 +179,15 @@
 					
 				
 				<br/>
+				<br/>
+				
 				<div class="bg-success" style="border-radius: 8px; margin-left: 5px;" >
 				<div class="row">
 					<div class ="col-md-12 " style=" margin-left: 5px;">
-						<label for="Race">Race</label>
+						<label for="Race" class="heading-title bold uppercase">Race</label>
 					</div>
 				</div>
+				
 				<div class="row " style="margin-top: 10px; margin-left: 5px;">
 					<div class="col-sm-1">
 					<span><input type="radio" ng-model="user.race" value="american" /></span>
@@ -179,6 +196,7 @@
 						<b uib-tooltip="A person having origins in any of the original peoples of North and South America (including Central America), and who maintains tribal affiliation or community attachment." tooltip-class="customClass" tooltip-placement="right">American Indian or Alaska Native</b> 
 					</div>		
 				</div>
+				
 				<div class="row " style="margin-top: 10px; margin-left: 5px;">
 					<div class="col-sm-1">
 					<span><input type="radio" ng-model="user.race" value="pacific" /></span>
@@ -187,6 +205,7 @@
 						<b uib-tooltip="A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands." tooltip-class="customClass" tooltip-placement="right">Native Hawaiian or Other Pacific Islander</b> 
 					</div>		
 				</div>
+				
 				<div class="row" style="margin-top: 10px; margin-left: 5px;">
 					<div class="col-sm-1">
 					<span><input type="radio" ng-model="user.race" value="asian" /></span>
@@ -195,6 +214,7 @@
 						<b uib-tooltip="A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam." tooltip-class="customClass" tooltip-placement="right">Asian</b>
 					</div>		
 				</div>
+				
 				<div class="row" style="margin-top: 10px; margin-left: 5px;">
 					<div class="col-sm-1">
 					<span><input type="radio" ng-model="user.race" value="blackafrican" /></span>
@@ -203,6 +223,7 @@
 						<b uib-tooltip="A person having origins in any of the black racial groups of Africa. Terms such as "Haitian" or "Negro" can be used in addition to "Black or African American"." tooltip-class="customClass" tooltip-placement="right">Black or African American</b> 
 					</div>		
 				</div>
+				
 				<div class="row" style="margin-top: 10px; margin-left: 5px;">
 					<div class="col-sm-1">
 					<span><input type="radio" ng-model="user.race" value="white" /></span>
@@ -210,16 +231,18 @@
 					<div class="col-md-10">
 						<b uib-tooltip="A person having origins in any of the original peoples of Europe, the Middle East, or North Africa." tooltip-class="customClass" tooltip-placement="right">White</b> 
 					</div>	
-					<br>	
-					<br>
+				
+				
 				</div>
 				</div>
 
 				<br/>
+				<br/>
+				
 
 				<div class="row" >
 					<div class="col-md-12">
-					 <label>Social Media</label>
+					 <label class="heading-title bold uppercase">Social Media</label>
 					</div>
 				</div>
 
@@ -282,7 +305,7 @@
 
 	<div id="register-content">
 				<div class="row col-md-12">
-					<label>Interests</label>
+					<label class="heading-title bold uppercase">Interests</label>
 				</div>
 				
 				<div class="row">
@@ -297,28 +320,43 @@
   				</div>
 
   				<br/>
+  				<br/>
 
   				<div class="row">
-					<label>How often do you play games?</label>
+					<label class="heading-title bold uppercase">How often do you play games?</label>
 				</div>
-				<div class="row">
+				<br/>
+				<!-- <div class="row">
 					<span><input type="radio" ng-model="user.pro" value="notveryoften" />Not Very Often</span>
 				</div>
 				<div class="row">		
       				<span><input type="radio" ng-model="user.pro" value="often"/>Often</span>
-				</div>
-
+				</div> -->
+				<div class="row form-group">
+        				<!-- <div class="col-md-6"> -->
+            		<div class="btn-group">
+        				<label class="btn btn-success" ng-model="user.pro" uib-btn-radio="'notveryoften'">Not Very Often</label>
+        				<label class="btn btn-success" ng-model="user.pro" uib-btn-radio="'often'">Often</label>
+   					</div>
+       				     <!-- </div> -->
+    			</div>
+  				<br/>
   				<br/>
 
   				<div class="row col-md-12">
-					<label>What type of games do you like to play?</label>
+					<label class="heading-title bold uppercase">What type of games do you like to play?</label>
 				</div>
 				
-				<table>
-  				 	<tr ng-repeat="g in games">
-           				<td><input type="checkbox" ng-model="user.game[g]">{{g}}</td> 
-        		 	</tr>
-  				</table>
+				<div class="row">
+					<div ng-repeat="role in activities">
+           				<div class="img">
+    						<img ng-src="{{role.url}}">
+  							<div class="desc">
+  							<input type="checkbox" ng-model="user.activities[role.name]">{{role.name}}
+  							</div>
+						</div>
+  					</div>
+  				</div>
 			
 			<br/>
 			<div class= "row">

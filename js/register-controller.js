@@ -1,4 +1,4 @@
-madscienceapp.controller('registerController', function($rootScope, $scope, $location,$sce) {
+madscienceapp.controller('registerController', function($rootScope, $scope, $location) {
     
     $rootScope.viewBackground = "background-signUpPage";
     $scope.pageClass = 'page-register';
@@ -9,24 +9,42 @@ madscienceapp.controller('registerController', function($rootScope, $scope, $loc
 
     $scope.roles = [
     {
-      url: 'images/nature.jpeg',
+      url: 'images/registeration/nature.jpeg',
       name: 'Nature'
     },
     {
-      url: 'images/pyschology.jpg',
+      url: 'images/registeration/pyschology.jpg',
       name: 'Psychology'
     },
     {
-      url: '../images/sports.jpg',
+      url: '../images/registeration/sports.jpg',
       name: 'Sports'
     },
     {
-      url: '../images/art.jpg',
+      url: '../images/registeration/art.jpg',
       name: 'Art'
     },
     {
-      url: '../images/madscience.jpg',
+      url: '../images/registeration/madscience.jpg',
       name: 'Mad Science'
+    }];
+
+    $scope.activities = [
+    {
+      url: 'images/board_game.jpg',
+      name: 'Board Game'
+    },
+    {
+      url: 'images/Card_games.jpg',
+      name: 'Card Game'
+    },
+    {
+      url: '../images/platformer.jpg',
+      name: 'Platformer'
+    },
+    {
+      url: '../images/shooter.jpg',
+      name: 'Shooters'
     }];
     
     $scope.gameplayed = ['Not very often','Often'];
@@ -51,6 +69,7 @@ madscienceapp.controller('registerController', function($rootScope, $scope, $loc
      //  country: 'China',
   
       gender: 'Male',
+      emailSetting : 'Daily',
  
     };
 

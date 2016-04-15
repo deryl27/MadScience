@@ -6,6 +6,8 @@ madscienceapp.run(function($rootScope) {
 
 var dummyemail = 'mad@gmail.com';
 var dummypassword = 'a_123456';
+var image = '../images/team1.jpg';
+var dummyname = 'Deryl';
 
 madscienceapp.controller('MadScienceController', ['$scope', 'localStorageService', '$location', '$rootScope', function($scope, localStorageService, $location, $rootScope)
 {
@@ -76,7 +78,7 @@ madscienceapp.config(function($routeProvider) {
             controller: 'madScienceController'
         })
         .when('/personallab', {
-            templateUrl: 'views/personallab.view.html',
+            templateUrl: 'views/personal-lab.html',
             controller: 'personallabController'
         });
 });

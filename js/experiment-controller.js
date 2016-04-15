@@ -1,4 +1,7 @@
 madscienceapp.controller('ExperimentController', function($scope, $location, $anchorScroll, $rootScope) {
+
+    $scope.rootScope = 'background-experimentPage';
+    console.log('CHANGE THE BACKGROUND ' + $scope.rootScope);
     $scope.pageClass = 'page-experiment';
 
     $scope.isReply = true;
