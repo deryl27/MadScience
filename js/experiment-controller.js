@@ -132,6 +132,8 @@ madscienceapp.controller('ExperimentController', function($scope, $location, $an
       console.log($location.hash());
       $anchorScroll();
     };
+
+
   
 
 
