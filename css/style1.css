@@ -5,11 +5,26 @@
 }
 
 .billBoardHolder {
-    height : 300px;     /* Given an absolute size here */
-    background-image: url("../images/billboard.png"); /* Image Path*/
+   /* height : 70%;
+    width: 40%;*/
+    background-color: brown ;     
+    /*background-image: url("../images/billboard.png");*/ 
     background-size : cover;
 }
 
+.filterNames {
+    font-size: 120%;
+}
+
+.billBoard {
+    background-color: blue;
+}
+
+.tabContent {
+    display: block;
+    margin-left: auto;
+    margin-right : auto;
+}
 
 .front_buildings {
     height : 60vh;          /* Beautiful Hack to resize the image to 60% of browser window.*/
@@ -20,9 +35,9 @@
     background-size: cover;
 }
 #container {
-    position: relative;
+    /*position: relative;
     top : 10%;
-    left : 20%;
+    left : 20%;*/
 }
 
 #container #tab-1 {
@@ -40,12 +55,15 @@
     cursor: pointer;
     display: block;
     float: left;
-    font-size: 1em; 
-    height: 2.5em;
-    line-height: 2.5em;
+    font-size: 1em;
+    width : 8.0em; 
+    height: 4.5em;
+    line-height: 3.5em;
     margin-right: .25em;
     padding: 0 1.5em;
     text-align: center;
+    position: relative;
+    left : 30%;
 }
 
 #container input:hover + label {
@@ -60,15 +78,15 @@
 
 #content {
     /*background: #f1f1f1;  */
-    min-height: 11em;
+    min-height: 20em;
     position: relative;
-    top : 70%;
-    left : -20%;
+    top : 4em;
+    left : 15%;
     width: 115%;
     z-index: 5;
 }
 
-#content div {
+#content #content-1, #content #content-2 {
     opacity: 0;
     padding: 1.5em;
     position: absolute;
@@ -88,9 +106,13 @@
     width: 100%;
 }
 
+#tab1, #tab2 {
+    position: absolute;
+    left : 50%;
+}
 
-#container input#tab-1:checked ~ #content #content-1,
-#container input#tab-2:checked ~ #content #content-2 {
+input#tab-1:checked ~ #content #content-1,
+input#tab-2:checked ~ #content #content-2 {
     opacity: 1;
     z-index: 100;
 }
@@ -413,22 +435,6 @@ a.darken:hover img {
 }
 .billBoardImages {
     background-size: cover;
-    height : 70%;
-    width : 70%;
-}
-.ng-hide-add, .ng-hide-remove {
-    /* ensure visibility during the transition */
-    display: block !important; /* yes, important */
-}
-.animate-enter {
-    -webkit-transition: 1s linear all; /* Chrome */
-    transition: 1s linear all;
-    opacity: 0;
-}
- 
-.animate-enter.animate-enter-active {
-    opacity: 1;
-}
-.animate-leave.animate-enter-active {
-    opacity: 0;
+    height : 100%;
+    width : 100%;
 }
