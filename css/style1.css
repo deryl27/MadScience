@@ -7,7 +7,7 @@
 .billBoardHolder {
    /* height : 70%;
     width: 40%;*/
-    background-color: brown ;     
+    background-color: green ;     
     /*background-image: url("../images/billboard.png");*/ 
     background-size : cover;
 }
@@ -49,9 +49,9 @@
     visibility: hidden;
 }
 
-.tabLabels {
-    background: #f9f9f9; 
-    color: #888;  
+.tabLabels {; 
+    color: black;  
+    background: white;
     cursor: pointer;
     display: block;
     float: left;
@@ -154,6 +154,8 @@ input.visible {
    font-family: Georgia, serif;
    text-decoration: none;
    vertical-align: middle;
+   height : 60px;
+   width : 130px;
 }
 .buttonSelected {
    border-top: 1px solid #0000ff;
@@ -182,8 +184,7 @@ input.visible {
     color: black;
     text-align: center;
     /*padding: 30px 50px;*/
-    height : 60px;
-    width : 110px;
+    
     bottom : 0px;
     left : 4%;
     /*left : 50px;
@@ -202,8 +203,6 @@ input.visible {
     background-color: #4CAF50; /* Green */
     color: black;
     position: absolute;
-    height : 60px;
-    width : 110px;
     bottom: 25%;
     left : 4%;
     text-align: center;
@@ -217,8 +216,6 @@ input.visible {
     background: lightgreen;
     color: black;
     position: absolute;
-    height : 60px;
-    width : 110px;
     bottom: 0px;
     left : 25%;
     text-align: center;
@@ -232,8 +229,6 @@ input.visible {
     color: black;
     position: absolute;
     background: lightgreen;
-    height : 60px;
-    width : 105px;
     bottom: 25%;
     left : 25%;
     text-align: center;
@@ -246,8 +241,6 @@ input.visible {
     color: black;
     position: absolute;
     background: lightgreen;
-    height : 60px;
-    width : 105px;
     bottom: 50%;
     left : 25%;
     text-align: center;
@@ -259,8 +252,6 @@ input.visible {
     background-color: brown; /* Green */
     color: black;
     position: absolute;
-    height : 60px;
-    width : 105px;
     bottom: 0px;
     left : 45%;
     text-align: center;
@@ -272,8 +263,6 @@ input.visible {
     background-color: brown; /* Green */
     color: black;
     position: absolute;
-    height : 60px;
-    width : 105px;
     bottom: 25%;
     left : 45%;
     text-align: center;
@@ -285,8 +274,6 @@ input.visible {
     background-color: brown; /* Green */
     color: black;
     position: absolute;
-    height : 60px;
-    width : 105px;
     bottom: 50%;
     left : 45%;
     text-align: center;
@@ -299,8 +286,6 @@ input.visible {
     color: black;
     background: lightgreen;
     position: absolute;
-    height : 60px;
-    width : 105px;
     bottom: 0px;
     left : 65%;
     text-align: center;
@@ -312,8 +297,6 @@ input.visible {
     background: lightgreen;
     color: black;
     position: absolute;
-    height : 60px;
-    width : 105px;
     bottom: 25%;
     left : 65%;
     text-align: center;
@@ -325,8 +308,6 @@ input.visible {
     background-color: black; /* Green */
     color: black;
     position: absolute;
-    height : 60px;
-    width : 105px;
     bottom: 0px;
     left : 85%;
     text-align: center;
@@ -338,8 +319,6 @@ input.visible {
     background-color: black; /* Green */
     color: black;
     position: absolute;
-    height : 60px;
-    width : 105px;
     bottom: 25%;
     left : 85%;
     text-align: center;
@@ -352,8 +331,6 @@ input.visible {
     background-color: black; /* Green */
     color: black;
     position: absolute;
-    height : 60px;
-    width : 105px;
     bottom: 50%;
     left : 85%;
     text-align: center;
@@ -365,8 +342,6 @@ input.visible {
     background-color: black; /* Green */
     color: black;
     position: absolute;
-    height : 60px;
-    width : 105px;
     bottom: 75%;
     left : 85%;
     text-align: center;
