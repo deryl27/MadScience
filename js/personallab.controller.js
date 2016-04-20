@@ -4,7 +4,7 @@ madscienceapp.controller('personallabController', function($rootScope, $scope, $
     
     //Set Background
     $rootScope.viewBackground = "background-personallabPage"; 
-    $scope.created = 24;
+    $scope.created = 1;
     $scope.played = 22;   	
 
     $scope.images = ['1', '2', '3', '4', '5'];

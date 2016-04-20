@@ -21,7 +21,12 @@ module.exports = function(config) {
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'bower_components/angular-local-storage/dist/angular-local-storage.js',  
-      'js/*.js',
+      'js/app.js',
+      'js/directive-confirmpassword.js',
+      'js/directive-password.js',
+      'js/experiment-controller.js',
+      'js/profile-controller.js',
+      'js/register-controller.js',
       'test/*.js'
     ],
 
