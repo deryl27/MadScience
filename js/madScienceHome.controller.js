@@ -46,27 +46,27 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp9.jpg", "cssClass" : "button9",  "expName" : 
-    						"Pschy 1"
+    						"Psych Laws"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button10",  "expName" : 
-    						"Pschy 2"
+    						"Lucid Dreaming"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button11",  "expName" : 
-    						"Pschy 3"
+    						"Mind"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button12",  "expName" : 
-    						"Pschy 4"
+    						"Brain"
     					},	    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button13",  "expName" : 
-    						"Pschy 5"
+    						"Trance"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button14",  "expName" : 
-    						"Pschy 6"
+    						"Psychdelic Drugs"
     					}
     				];
 
@@ -140,59 +140,59 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
        		"cat2" : [
     					{
     						"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button1", "expName" : 
-    						"Sports 1"
+    						"Soccer"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button2", "expName" : 
-    						"Sports 2"
+    						"Football"
     					},
 		   			    {
 		   			    	"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button3",  "expName" : 
-    						"Sports 3"
+    						"Cricket"
     					},
 		   				{
 		   					"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button4",  "expName" : 
-    						"Sports 4"
+    						"Olympics"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button5",  "expName" : 
-    						"Sports 5"
+    						"Handball"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp6.jpg", "cssClass" : "button6",  "expName" : 
-    						"Sports 6"
+    						"Swimming"
     					},    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp7.jpg", "cssClass" : "button7",  "expName" : 
-    						"Sports 7"
+    						"Karate"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp8.jpg", "cssClass" : "button8",  "expName" : 
-    						"Sports 8"
+    						"Gymnastics"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp9.jpg", "cssClass" : "button9",  "expName" : 
-    						"Sports 9"
+    						"Baseball"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button10",  "expName" : 
-    						"Sports 10"
+    						"Hockey"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button11",  "expName" : 
-    						"Sports 11"
+    						"Basketball"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button12",  "expName" : 
-    						"Sports 12"
+    						"Rugby"
     					},	    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button13",  "expName" : 
-    						"Sports 13"
+    						"NFL"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button14",  "expName" : 
-    						"Sports 14"
+    						"Match Fixing"
     					}
     				]
     		},
@@ -236,23 +236,23 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button10",  "expName" : 
-    						"School 1"
+    						"Loan"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button11",  "expName" : 
-    						"School 2"
+    						"Plagiarism"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button12",  "expName" : 
-    						"School 3"
+    						"High Costs"
     					},	    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button13",  "expName" : 
-    						"School 4"
+    						"Fees"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button14",  "expName" : 
-    						"School 6"
+    						"Private Schools"
     					}
     				]
     		},
@@ -260,59 +260,59 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
        		"cat4" : [
     					{
     						"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button1", "expName" : 
-    						"Law 1"
+    						"affidavit"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button2", "expName" : 
-    						"Law 2"
+    						"Criminal Case"
     					},
 		   			    {
 		   			    	"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button3",  "expName" : 
-    						"Law 3"
+    						"Civil Rights"
     					},
 		   				{
 		   					"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button4",  "expName" : 
-    						"Law 4"
+    						"Lawyers"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button5",  "expName" : 
-    						"Law 5"
+    						"Adjournment"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp6.jpg", "cssClass" : "button6",  "expName" : 
-    						"Law 6"
+    						"Courts"
     					},    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp7.jpg", "cssClass" : "button7",  "expName" : 
-    						"Law 7"
+    						"Parliament"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp8.jpg", "cssClass" : "button8",  "expName" : 
-    						"Law 8"
+    						"Secularism"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp9.jpg", "cssClass" : "button9",  "expName" : 
-    						"Law 9"
+    						"Judges"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button10",  "expName" : 
-    						"Law 10"
+    						"State Laws"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button11",  "expName" : 
-    						"Law 11"
+    						"National Laws"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button12",  "expName" : 
-    						"Law 12"
+    						"Divorce"
     					},	    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button13",  "expName" : 
-    						"Law 13"
+    						"Contempt"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button14",  "expName" : 
-    						"Law 14"
+    						"Contract"
     					}
     				]
     		},
@@ -320,59 +320,59 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
        		"cat5" : [
     					{
     						"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button1", "expName" : 
-    						"Tech 1"
+    						"Mobiles"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button2", "expName" : 
-    						"Tech 2"
+    						"Laptops"
     					},
 		   			    {
 		   			    	"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button3",  "expName" : 
-    						"Tech 3"
+    						"Touch Devices"
     					},
 		   				{
 		   					"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button4",  "expName" : 
-    						"Tech 4"
+    						"Apple"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button5",  "expName" : 
-    						"Tech 5"
+    						"Google"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp6.jpg", "cssClass" : "button6",  "expName" : 
-    						"Tech 6"
+    						"Search"
     					},    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp7.jpg", "cssClass" : "button7",  "expName" : 
-    						"Tech 7"
+    						"Algorithms"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp8.jpg", "cssClass" : "button8",  "expName" : 
-    						"Tech 8"
+    						"Software"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp9.jpg", "cssClass" : "button9",  "expName" : 
-    						"Tech 9"
+    						"Hardware"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button10",  "expName" : 
-    						"Tech 10"
+    						"Tablets"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button11",  "expName" : 
-    						"Tech 11"
+    						"Smartphones"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button12",  "expName" : 
-    						"Tech 12"
+    						"Tesla"
     					},	    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button13",  "expName" : 
-    						"Tech 13"
+    						"Cars"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button14",  "expName" : 
-    						"Tech 14"
+    						"FutureTech"
     					}
     				]
     		},
@@ -380,59 +380,59 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
        		"cat6" : [
     					{
     						"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button1", "expName" : 
-    						"Health 1"
+    						"Insurance"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button2", "expName" : 
-    						"Health 2"
+    						"Emergency"
     					},
 		   			    {
 		   			    	"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button3",  "expName" : 
-    						"Health 3"
+    						"Hospital"
     					},
 		   				{
 		   					"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button4",  "expName" : 
-    						"Health 4"
+    						"Clinic"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button5",  "expName" : 
-    						"Health 5"
+    						"Pediatrics"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp6.jpg", "cssClass" : "button6",  "expName" : 
-    						"Health 6"
+    						"Pet Care"
     					},    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp7.jpg", "cssClass" : "button7",  "expName" : 
-    						"Health 7"
+    						"Family Care"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp8.jpg", "cssClass" : "button8",  "expName" : 
-    						"Health 8"
+    						"X-Ray"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp9.jpg", "cssClass" : "button9",  "expName" : 
-    						"Health 9"
+    						"Dental"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button10",  "expName" : 
-    						"Health 10"
+    						"Admin"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button11",  "expName" : 
-    						"Health 11"
+    						"Malaria"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button12",  "expName" : 
-    						"Health 12"
+    						"Drugs"
     					},	    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button13",  "expName" : 
-    						"Health 13"
+    						"Addiction"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button14",  "expName" : 
-    						"Health 14"
+    						"Rehab"
     					}
     				]
     		},
@@ -440,59 +440,59 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
        		"cat7" : [
     					{
     						"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button1", "expName" : 
-    						"Env 1"
+    						"Renewable"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button2", "expName" : 
-    						"Env 2"
+    						"Fossils "
     					},
 		   			    {
 		   			    	"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button3",  "expName" : 
-    						"Env 3"
+    						"Global Warming"
     					},
 		   				{
 		   					"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button4",  "expName" : 
-    						"Env 4"
+    						"Ecosystem"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button5",  "expName" : 
-    						"Env 5"
+    						"Solar"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp6.jpg", "cssClass" : "button6",  "expName" : 
-    						"Env 6"
+    						"Pollution"
     					},    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp7.jpg", "cssClass" : "button7",  "expName" : 
-    						"Env 7"
+    						"Oil Spills"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp8.jpg", "cssClass" : "button8",  "expName" : 
-    						"Env 8"
+    						"Evaporation"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp9.jpg", "cssClass" : "button9",  "expName" : 
-    						"Env 9"
+    						"Fuselage"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button10",  "expName" : 
-    						"Env 10"
+    						"Wastage"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button11",  "expName" : 
-    						"Env 11"
+    						"Oceans"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button12",  "expName" : 
-    						"Env 12"
+    						"Species"
     					},	    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button13",  "expName" : 
-    						"Env 13"
+    						"Water"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button14",  "expName" : 
-    						"Env 14"
+    						"Gases"
     					}
     				]
     		},
@@ -500,59 +500,59 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
        		"cat8" : [
     					{
     						"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button1", "expName" : 
-    						"Politics 1"
+    						"Corruption"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button2", "expName" : 
-    						"Politics 2"
+    						"President"
     					},
 		   			    {
 		   			    	"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button3",  "expName" : 
-    						"Politics 3"
+    						"Democracy"
     					},
 		   				{
 		   					"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button4",  "expName" : 
-    						"Politics 4"
+    						"Republican"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button5",  "expName" : 
-    						"Politics 5"
+    						"Union"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp6.jpg", "cssClass" : "button6",  "expName" : 
-    						"Politics 6"
+    						"State"
     					},    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp7.jpg", "cssClass" : "button7",  "expName" : 
-    						"Politics 7"
+    						"Freedom"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp8.jpg", "cssClass" : "button8",  "expName" : 
-    						"Politics 8"
+    						"Racism"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp9.jpg", "cssClass" : "button9",  "expName" : 
-    						"Politics 9"
+    						"1757"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button10",  "expName" : 
-    						"Politics 10"
+    						"Vote"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button11",  "expName" : 
-    						"Politics 11"
+    						"Election"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button12",  "expName" : 
-    						"Politics 12"
+    						"Aristocrats"
     					},	    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button13",  "expName" : 
-    						"Politics 13"
+    						"Money"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button14",  "expName" : 
-    						"Politics 14"
+    						"Bribery"
     					}
     				]
     		},
@@ -560,59 +560,59 @@ madscienceapp.controller('madScienceController', function($rootScope, $scope, $l
        		"cat9" : [
     					{
     						"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button1", "expName" : 
-    						"Education 1"
+    						"English"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button2", "expName" : 
-    						"Education 2"
+    						"Chemistry"
     					},
 		   			    {
 		   			    	"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button3",  "expName" : 
-    						"Education 3"
+    						"Geography"
     					},
 		   				{
 		   					"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button4",  "expName" : 
-    						"Education 4"
+    						"AI"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button5",  "expName" : 
-    						"Education 5"
+    						"Music"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp6.jpg", "cssClass" : "button6",  "expName" : 
-    						"Education 6"
+    						"History"
     					},    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp7.jpg", "cssClass" : "button7",  "expName" : 
-    						"Education 7"
+    						"Civics"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp8.jpg", "cssClass" : "button8",  "expName" : 
-    						"Education 8"
+    						"Biology"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp9.jpg", "cssClass" : "button9",  "expName" : 
-    						"Education 9"
+    						"Nuclear Science"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp5.jpg", "cssClass" : "button10",  "expName" : 
-    						"Education 10"
+    						"Physics"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp1.jpg", "cssClass" : "button11",  "expName" : 
-    						"Education 11"
+    						"Middle School"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp2.jpg", "cssClass" : "button12",  "expName" : 
-    						"Education 12"
+    						"Arts"
     					},	    
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp3.jpg", "cssClass" : "button13",  "expName" : 
-    						"Education 13"
+    						"Media"
     					},
 		    			{
 		    				"billBoardImage" : "images/expimgs/exp4.jpg", "cssClass" : "button14",  "expName" : 
-    						"Education 14"
+    						"Science"
     					}
     				]
     		}
