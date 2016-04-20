@@ -1,6 +1,6 @@
 madscienceapp.controller('mainController', function($rootScope, $scope, $location, $timeout) {
 	//Setting the homaPage background.
-    $rootScope.viewBackground = "background-homePage";
+    $rootScope.viewBackground = "home-back";
     $scope.myValue = false;
 
     $scope.gotoPage = function()
