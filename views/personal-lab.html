@@ -1,13 +1,17 @@
-<br/>
-<br/>
-<br/>
-<div>
+
+<div style="margin-top: 80px;">
 	<div class="row">
 		<div class="col-md-1 col-lg-1">
 		</div>
 		<div style="text-align:center;" class="col-md-10 col-lg-10">
-			<img ng-src="images/experiments.png" class="col-md-12 col-lg-12"></img>
-		</div>
+					<div ng-repeat="exp in exps" style="width: 1000px;">
+           				<div class="img2">
+           					<a href="/mad#/experiments">
+    						<img ng-src="{{exp.url}}">
+    						</a>
+						</div>
+  					</div>
+  		</div>
 		<div class="col-md-1 col-lg-1">
 		</div>
 	</div>
@@ -16,8 +20,8 @@
 		<div class="col-md-4 col-lg-4">
 			<div class="col-md-1 col-lg-1"></div>
 			<div class="col-md-10 col-lg-10">
-				<img ng-src="images/blackboard.png" class="col-md-12 col-lg-12"></img>
-				<img style="margin-top:10%;" ng-src="images/trophies.png"></img>
+				<img ng-src="images/personallab/blackboard.png" class="col-md-12 col-lg-12 img3"></img>
+				<img style="margin-top:10%;" ng-src="images/personallab/trophies.png" class="img3"></img>
 			</div>
 			<div class="col-md-1 col-lg-1"></div>
 			<div style="position:absolute; top: 8%; left: 32%; color:white"><i>STATS</div>
@@ -26,11 +30,11 @@
 			
 		</div>
 		<div class="col-md-4 col-lg-4" style="margin-top:5%; text-align:center">
-			<img ng-src="images/desk.png" class="col-md-8 col-lg-8"></img>
+			<img ng-src="images/personallab/desk.png" class="col-md-8 col-lg-8 img3"></img>
 		</div>
 		<div class="col-md-4 col-lg-4">
-			<img  class ="col-md-10 col-lg-10" ng-src="images/comm_labs.png"></img>
-			<img style="margin-top:25%" ng-src="images/portraits.png"></img>
+			<img  class ="col-md-10 col-lg-10 img3" ng-src="images/personallab/comm_labs.png"></img>
+			<img  class="img3" style="margin-top:25%" ng-src="images/personallab/portraits.png"></img>
 		</div>
 	</div>
 </div>
