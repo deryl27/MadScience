@@ -19,8 +19,8 @@ html         { overflow-y:hidden; }
 }
 
 .home-back {
-  background-image: url("../images/loading.png");
-  /*background-size: cover;*/
+  background-image: url("../images/madWorldBackground.png");
+  background-size: cover;
   
 }
 
